@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -44,6 +44,15 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <div class="stats">
 <div class="stat"><b>40</b>versions</div><div class="stat"><b>240+</b>modules</div><div class="stat"><b>6</b>domaines</div><div class="stat"><b>V40</b>projet final</div>
 </div>
+</section>
+
+<section id="progress">
+<div class="sectionhead"><div class="tag">MA PROGRESSION</div><h2>Ton parcours GeoLab</h2><p>Valide les versions étudiées. La progression est conservée dans ce navigateur.</p></div>
+<div class="card" style="margin-bottom:20px">
+<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><b id="progressText">0 / 40 versions validées</b><b id="progressPercent">0%</b></div>
+<div style="height:12px;background:#dce6e8;border-radius:99px;overflow:hidden;margin-top:10px"><div id="progressBar" style="height:100%;width:0;background:#d6a42d;transition:.25s"></div></div>
+</div>
+<div id="progressGrid" class="grid" style="margin-bottom:20px"></div>
 </section>
 
 <section id="versions">
@@ -151,12 +160,33 @@ function openModal(x){
  <div class="quiz"><b>Question :</b> ${q}
  <button onclick="this.nextElementSibling.textContent='✅ ${answer}'">Afficher la réponse</button>
  <p></p></div>
+ <button class="btn" onclick="validateVersion(x[0])">✅ Valider cette version</button>
+ <p id="validationMsg"></p>
  <p><b>Objectif :</b> maîtriser les notions essentielles de cette version et préparer la suivante.</p>`;
  document.getElementById('modal').classList.add('show');
  document.getElementById('modal').classList.add('show');
 }
 function closeModal(){document.getElementById('modal').classList.remove('show')}
 function answer(ok){document.getElementById('result').textContent=ok?'✅ Bonne réponse ! Le pli est une structure typique de déformation ductile.':'❌ Pas tout à fait. Recommence : pense à une structure qui se courbe sans rupture.'}
-document.getElementById('search').addEventListener('input',render);document.getElementById('filter').addEventListener('change',render);render();
+
+const PROGRESS_KEY='geolab_progress_v4';
+function getProgress(){try{return JSON.parse(localStorage.getItem(PROGRESS_KEY)||'[]')}catch(e){return[]}}
+function saveProgress(p){localStorage.setItem(PROGRESS_KEY,JSON.stringify([...new Set(p)]))}
+function updateProgress(){
+ const p=getProgress(), n=p.length, pct=Math.round(n/40*100);
+ document.getElementById('progressText').textContent=`${n} / 40 versions validées`;
+ document.getElementById('progressPercent').textContent=`${pct}%`;
+ document.getElementById('progressBar').style.width=pct+'%';
+ const g=document.getElementById('progressGrid'); if(!g)return;
+ g.innerHTML=data.map(x=>`<div class="card"><div class="code">${x[0]}</div><b>${p.includes(x[0])?'✅ Validée':'○ À étudier'}</b></div>`).join('');
+}
+function validateVersion(code){
+ const p=getProgress(); if(!p.includes(code))p.push(code); saveProgress(p); updateProgress();
+ const el=document.getElementById('validationMsg'); if(el)el.textContent='✅ Version validée et enregistrée sur cet appareil.';
+}
+document.getElementById('search').addEventListener('input',render);
+document.getElementById('filter').addEventListener('change',render);
+render(); updateProgress();
+
 </script>
 </body></html>
