@@ -1,3 +1,162 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GeoLab — Géologie</title><style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#16323b;line-height:1.6}nav{padding:16px 6%;border-bottom:1px solid #ddd;display:flex;justify-content:space-between;position:sticky;top:0;background:#fff;z-index:2}.logo{font-size:28px;font-weight:800}.logo span{color:#d7a52e}.logo small{display:block;font-size:10px;color:#64777d}.hero{padding:90px 7%;background:#eef5f7}.hero h1{font-size:clamp(42px,7vw,72px);line-height:1.05}.hero h1 span{color:#d7a52e}.hero p{font-size:19px;color:#64777d;max-width:700px}.btn{display:inline-block;padding:11px 18px;border:1px solid #16323b;text-decoration:none;color:#16323b;font-weight:bold;margin-top:15px}section{padding:65px 7%}h2{font-size:36px}.stats,.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.stat,.card,.version{border:1px solid #dbe4e7;padding:20px}.stat{background:#eef5f7}.stat b{font-size:34px;display:block}.grid{grid-template-columns:repeat(4,1fr)}#programme{background:#eef5f7}.final{background:#16323b;color:#fff}.final p{color:#d7e1e4}footer{padding:30px 7%;background:#10262d;color:#fff}footer span{color:#d7a52e}@media(max-width:700px){.stats,.grid{grid-template-columns:1fr 1fr}nav div{display:none}}@media(max-width:450px){.stats,.grid{grid-template-columns:1fr}}
-</style></head><body><nav><div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div><div><a href="#programme">Programme</a> · <a href="#final">V40</a></div></nav><header class="hero"><p>PLATEFORME PÉDAGOGIQUE · V01 → V40</p><h1>La géologie, <span>de terrain à modèle.</span></h1><p>Un parcours complet pour apprendre à observer, interpréter, explorer et construire un modèle géologique.</p><a class="btn" href="#programme">Voir les 40 versions →</a></header><section><h2>Le parcours GeoLab</h2><div class="stats"><div class="stat"><b>40</b>versions</div><div class="stat"><b>240</b>modules</div><div class="stat"><b>6</b>domaines finaux</div><div class="stat"><b>1</b>projet intégrateur</div></div></section><section id="programme"><h2>Les 40 versions</h2><div class="grid"><div class="version"><b>V01</b><br>Fondamentaux</div><div class="version"><b>V02</b><br>Minéralogie</div><div class="version"><b>V03</b><br>Pétrologie</div><div class="version"><b>V04</b><br>Sédimentologie</div><div class="version"><b>V05</b><br>Géomorphologie</div><div class="version"><b>V06</b><br>Paléontologie</div><div class="version"><b>V07</b><br>Hydrogéologie</div><div class="version"><b>V08</b><br>Géologie régionale</div><div class="version"><b>V09</b><br>Cartographie</div><div class="version"><b>V10</b><br>Terrain</div><div class="version"><b>V11</b><br>Géologie structurale</div><div class="version"><b>V12</b><br>Tectonique</div><div class="version"><b>V13</b><br>Déformation</div><div class="version"><b>V14</b><br>Analyse structurale</div><div class="version"><b>V15</b><br>Failles & plis</div><div class="version"><b>V16</b><br>Métamorphisme</div><div class="version"><b>V17</b><br>Bassins</div><div class="version"><b>V18</b><br>Géodynamique</div><div class="version"><b>V19</b><br>Géologie structurale avancée</div><div class="version"><b>V20</b><br>Synthèse tectonique</div><div class="version"><b>V21</b><br>Géochimie</div><div class="version"><b>V22</b><br>Géochimie isotopique</div><div class="version"><b>V23</b><br>Gîtes minéraux</div><div class="version"><b>V24</b><br>Gîtologie</div><div class="version"><b>V25</b><br>Prospection</div><div class="version"><b>V26</b><br>Altération</div><div class="version"><b>V27</b><br>Métallogénie</div><div class="version"><b>V28</b><br>Géologie économique</div><div class="version"><b>V29</b><br>Exploration intégrée</div><div class="version"><b>V30</b><br>Ressources</div><div class="version"><b>V31</b><br>Forage</div><div class="version"><b>V32</b><br>Logging & QA/QC</div><div class="version"><b>V33</b><br>Géostatistique</div><div class="version"><b>V34</b><br>Géologie minière</div><div class="version"><b>V35</b><br>Estimation</div><div class="version"><b>V36</b><br>Échantillonnage</div><div class="version"><b>V37</b><br>Mine appliquée</div><div class="version"><b>V38</b><br>SIG & télédétection</div><div class="version"><b>V39</b><br>Géophysique</div><div class="version"><b>V40</b><br>Projet final</div></div></section><section id="final" class="final"><h2>V40 — Projet géologique intégrateur</h2><p>Observation → modèle géologique → exploration → forage & QA/QC → ressources → décision minière.</p><ol><li>Définir le contexte géologique.</li><li>Construire le modèle conceptuel.</li><li>Intégrer géochimie et géophysique.</li><li>Proposer forage et QA/QC.</li><li>Discuter ressources et incertitudes.</li><li>Présenter les recommandations.</li></ol></section><footer>Geo<span>Lab</span> · Plateforme pédagogique de géologie</footer></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="GeoLab — plateforme pédagogique de géologie, de V01 à V40.">
+<title>GeoLab — Formation en géologie</title>
+<style>
+:root{--bg:#f7faf9;--card:#fff;--ink:#12343b;--muted:#61757b;--gold:#d6a42d;--line:#dce6e8;--dark:#102b32}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+nav{position:sticky;top:0;z-index:10;background:#fffffff2;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:13px 6%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:25px}.logo span{color:var(--gold)}.logo small{display:block;font-size:9px;letter-spacing:1px;color:var(--muted)}
+nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:18px}
+.hero{padding:80px 7%;background:linear-gradient(135deg,#eaf4f3,#fff)}.tag{font-size:12px;letter-spacing:2px;font-weight:800;color:var(--muted)}
+h1{font-size:clamp(42px,8vw,78px);line-height:1.02;margin:12px 0}.hero h1 span{color:var(--gold)}.hero p{max-width:760px;font-size:19px;color:var(--muted)}
+.btn{display:inline-block;background:var(--dark);color:#fff;text-decoration:none;padding:12px 19px;border-radius:6px;font-weight:800;margin-top:10px}
+section{padding:60px 7%}.sectionhead{max-width:800px;margin-bottom:28px}.sectionhead h2{font-size:38px;line-height:1.1;margin:7px 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat{background:#eaf4f3;border:1px solid var(--line);padding:20px}.stat b{font-size:34px;display:block}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.search{flex:1;min-width:220px;padding:13px;border:1px solid var(--line);border-radius:6px;font-size:16px}.filter{padding:13px;border:1px solid var(--line);border-radius:6px;background:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.card{background:var(--card);border:1px solid var(--line);padding:17px;border-radius:7px;transition:.15s}.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px #12343b12}.code{color:var(--gold);font-weight:900}.card h3{margin:5px 0}.card p{color:var(--muted);margin:0 0 10px;font-size:14px}.open{border:0;background:var(--dark);color:#fff;padding:8px 11px;border-radius:5px;font-weight:700}
+.path{background:var(--dark);color:#fff}.path .muted{color:#d7e1e4}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.bigcard{padding:24px;border:1px solid #2b4a51;background:#17383f;border-radius:8px}
+.final{background:#fff}.quiz{background:#eef5f4;padding:24px;border-radius:8px}.quiz button{display:block;width:100%;text-align:left;margin:8px 0;padding:12px;border:1px solid var(--line);background:#fff;border-radius:6px}
+footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:20;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.modalbox{background:#fff;max-width:720px;width:100%;max-height:88vh;overflow:auto;border-radius:10px;padding:25px}.close{float:right;border:0;background:none;font-size:26px}
+@media(max-width:800px){.stats,.grid{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}nav div{display:none}}
+@media(max-width:500px){.stats,.grid{grid-template-columns:1fr}.hero,section{padding-left:6%;padding-right:6%}}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
+<div><a href="#parcours">Parcours</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+</nav>
+
+<header class="hero">
+<div class="tag">PLATEFORME PÉDAGOGIQUE · VERSION 2</div>
+<h1>La géologie,<br><span>de terrain à modèle.</span></h1>
+<p>Un parcours progressif de 40 versions pour apprendre la géologie, l'exploration, le SIG, la géophysique, la géostatistique et la géologie minière.</p>
+<a class="btn" href="#versions">Explorer les 40 versions →</a>
+</header>
+
+<section id="parcours">
+<div class="sectionhead"><div class="tag">LE PARCOURS</div><h2>Une progression structurée</h2><p>Chaque version ouvre un niveau de formation. Clique sur une carte pour afficher son objectif et ses modules.</p></div>
+<div class="stats">
+<div class="stat"><b>40</b>versions</div><div class="stat"><b>240+</b>modules</div><div class="stat"><b>6</b>domaines</div><div class="stat"><b>V40</b>projet final</div>
+</div>
+</section>
+
+<section id="versions">
+<div class="sectionhead"><div class="tag">BIBLIOTHÈQUE</div><h2>V01 → V40</h2><p>Recherche une version ou un thème.</p></div>
+<div class="toolbar"><input id="search" class="search" placeholder="🔎 Rechercher : tectonique, forage, SIG..."><select id="filter" class="filter"><option value="all">Tous les domaines</option><option value="fondamentaux">Fondamentaux</option><option value="structure">Structure & tectonique</option><option value="ressources">Géochimie & ressources</option><option value="exploration">Exploration & synthèse</option></select></div>
+<div id="grid" class="grid"></div>
+</section>
+
+<section class="path">
+<div class="sectionhead"><div class="tag">4 BLOCS</div><h2>Le chemin GeoLab</h2></div>
+<div class="cards">
+<div class="bigcard"><h3>01–10 · Fondamentaux</h3><p class="muted">Bases de la géologie, minéralogie, pétrologie, sédimentologie, cartographie et terrain.</p></div>
+<div class="bigcard"><h3>11–20 · Structure & tectonique</h3><p class="muted">Déformation, failles, plis, métamorphisme, bassins et géodynamique.</p></div>
+<div class="bigcard"><h3>21–30 · Géochimie & ressources</h3><p class="muted">Géochimie, gîtologie, métallogénie, prospection et ressources.</p></div>
+<div class="bigcard"><h3>31–40 · Exploration & synthèse</h3><p class="muted">Forage, QA/QC, géostatistique, SIG, géophysique et projet intégrateur.</p></div>
+</div>
+</section>
+
+<section id="quiz" class="final">
+<div class="sectionhead"><div class="tag">MINI-QUIZ</div><h2>Teste tes connaissances</h2></div>
+<div class="quiz"><b>Question :</b> Quel type de structure résulte généralement d'une déformation ductile compressive ?
+<button onclick="answer(false)">A — Une faille normale</button>
+<button onclick="answer(true)">B — Un pli</button>
+<button onclick="answer(false)">C — Une cheminée volcanique</button>
+<p id="result"></p></div>
+</section>
+
+<footer>Geo<span class="gold">Lab</span> · Plateforme pédagogique de géologie · V01 → V40</footer>
+
+<div id="modal" class="modal"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+
+<script>
+const data=[
+["V01","Fondamentaux de la géologie","fondamentaux","Observer la Terre et comprendre ses grands matériaux.","Cycle des roches · temps géologique · terrain"],
+["V02","Minéralogie & cristallographie","fondamentaux","Identifier les minéraux et comprendre les structures cristallines.","Propriétés · cristaux · identification"],
+["V03","Pétrologie","fondamentaux","Relier textures, minéraux et histoire des roches.","Magmatique · métamorphique · textures"],
+["V04","Sédimentologie","fondamentaux","Lire les environnements de dépôt et les structures sédimentaires.","Faciès · stratification · bassins"],
+["V05","Géomorphologie","fondamentaux","Interpréter les formes du relief et leur évolution.","Processus · relief · paysages"],
+["V06","Paléontologie","fondamentaux","Utiliser les fossiles comme archives géologiques.","Fossiles · biozonation · paléoenvironnements"],
+["V07","Hydrogéologie","fondamentaux","Comprendre les aquifères et les circulations d'eau.","Porosité · perméabilité · aquifères"],
+["V08","Géologie régionale","fondamentaux","Construire une lecture géologique à l'échelle régionale.","Terrains · unités · synthèse"],
+["V09","Cartographie géologique","fondamentaux","Passer des observations à une carte interprétée.","Contacts · légende · coupes"],
+["V10","Géologie de terrain","fondamentaux","Organiser une campagne de terrain efficace.","Stations · mesures · carnet"],
+["V11","Géologie structurale","structure","Décrire et analyser les structures tectoniques.","Attitudes · structures · cinématique"],
+["V12","Tectonique","structure","Relier structures, contraintes et dynamique des plaques.","Plaques · régimes · tectonique"],
+["V13","Déformation","structure","Comprendre les mécanismes de déformation des roches.","Fragile · ductile · contrainte"],
+["V14","Analyse structurale","structure","Construire une interprétation structurale cohérente.","Stéréonets · cinématique · synthèse"],
+["V15","Failles & plis","structure","Identifier les grandes familles de structures.","Failles · plis · critères"],
+["V16","Métamorphisme","structure","Relier pression, température et assemblages minéraux.","Faciès · gradients · réactions"],
+["V17","Bassins sédimentaires","structure","Comprendre la subsidence et l'architecture des bassins.","Subsidence · stratigraphie · tectonique"],
+["V18","Géodynamique","structure","Relier les observations à la dynamique terrestre.","Lithosphère · convection · cycles"],
+["V19","Géologie structurale avancée","structure","Approfondir l'analyse des déformations complexes.","Zones de cisaillement · inversion · transpression"],
+["V20","Synthèse tectonique","structure","Produire un modèle tectonique intégré.","Chronologie · structures · modèle"],
+["V21","Géochimie","ressources","Utiliser la chimie des roches pour interpréter leur histoire.","Éléments majeurs · traces · diagrammes"],
+["V22","Géochimie isotopique","ressources","Exploiter les isotopes comme traceurs géologiques.","Systèmes isotopiques · âges · sources"],
+["V23","Gîtes minéraux","ressources","Reconnaître les grands types de gisements.","Gîtes · minerais · encaissants"],
+["V24","Gîtologie","ressources","Comprendre les processus de concentration minérale.","Altération · fluides · contrôles"],
+["V25","Prospection","ressources","Concevoir une stratégie de recherche de ressources.","Cibles · anomalies · priorisation"],
+["V26","Altération hydrothermale","ressources","Lire les halos d'altération et leurs contrôles.","Assemblages · zonation · vecteurs"],
+["V27","Métallogénie","ressources","Relier tectonique, fluides et minéralisation.","Systèmes · modèles · chronologie"],
+["V28","Géologie économique","ressources","Passer du gisement à la valeur géologique.","Teneur · tonnage · contraintes"],
+["V29","Exploration intégrée","ressources","Combiner plusieurs familles de données.","Géologie · géochimie · géophysique"],
+["V30","Ressources minérales","ressources","Comprendre la logique de l'estimation des ressources.","Données · domaines · incertitudes"],
+["V31","Forage","exploration","Préparer, suivre et interpréter une campagne de forage.","Planification · carottage · orientation"],
+["V32","Logging & QA/QC","exploration","Standardiser les données et contrôler leur qualité.","Logging · contrôles · traçabilité"],
+["V33","Géostatistique","exploration","Modéliser la variabilité spatiale des données.","Variogrammes · interpolation · validation"],
+["V34","Géologie minière","exploration","Intégrer géologie et contraintes minières.","Modèle · extraction · contrôle"],
+["V35","Estimation","exploration","Construire une estimation raisonnée des volumes et teneurs.","Domaines · estimation · validation"],
+["V36","Échantillonnage","exploration","Concevoir un échantillonnage représentatif.","Biais · protocoles · QA/QC"],
+["V37","Mine appliquée","exploration","Relier modèle géologique et décisions opérationnelles.","Contrôle de teneur · suivi · réconciliation"],
+["V38","SIG & télédétection","exploration","Intégrer données spatiales et images pour l'exploration.","SIG · raster · télédétection"],
+["V39","Géophysique","exploration","Utiliser les méthodes géophysiques pour contraindre le sous-sol.","Magnétisme · gravimétrie · résistivité"],
+["V40","Projet géologique intégrateur","exploration","Assembler toutes les compétences dans une étude complète.","Modèle · exploration · forage · ressources"]
+];
+function render(){
+ const q=document.getElementById('search').value.toLowerCase(), f=document.getElementById('filter').value;
+ const g=document.getElementById('grid');g.innerHTML='';
+ data.filter(x=>(f==='all'||x[2]===f)&&(!q||x.join(' ').toLowerCase().includes(q))).forEach(x=>{
+  const d=document.createElement('article');d.className='card';
+  d.innerHTML=`<div class="code">${x[0]}</div><h3>${x[1]}</h3><p>${x[3]}</p><button class="open">Ouvrir le cours →</button>`;
+  d.querySelector('button').onclick=()=>openModal(x);g.appendChild(d);
+ });
+}
+function openModal(x){
+ const modules=x[4].split(' · ');
+ const questions={
+  "V01":"Quelle discipline étudie la composition et les propriétés des minéraux ?",
+  "V11":"Quel outil permet de représenter les orientations de plans et de linéations ?",
+  "V20":"Une synthèse tectonique doit-elle intégrer une chronologie des déformations ?",
+  "V33":"À quoi sert principalement un variogramme ?",
+  "V38":"Quel type de donnée est couramment utilisé dans un SIG ?",
+  "V40":"Quel est le but d'un projet géologique intégrateur ?"
+ };
+ const q=questions[x[0]]||"Quelle est la meilleure manière d'aborder ce thème ?";
+ const answer=x[0]==="V01"?"La minéralogie.":x[0]==="V11"?"Le stéréonet.":x[0]==="V20"?"Oui, pour ordonner les événements tectoniques.":x[0]==="V33"?"Décrire la continuité spatiale d'une variable.":x[0]==="V38"?"Une couche vectorielle ou raster.":"Intégrer les données pour produire un modèle et des recommandations.";
+ document.getElementById('modalContent').innerHTML=`
+ <div class="tag">${x[0]}</div><h2>${x[1]}</h2><p>${x[3]}</p>
+ <h3>Parcours de cours</h3>
+ <ol><li><b>Chapitre 1 — Concepts clés :</b> vocabulaire, définitions et principes.</li>
+ <li><b>Chapitre 2 — Méthode :</b> observation, mesure, interprétation et contrôle.</li>
+ <li><b>Chapitre 3 — Application :</b> étude de cas et données de terrain.</li>
+ <li><b>Chapitre 4 — Synthèse :</b> interprétation et préparation de la version suivante.</li></ol>
+ <h3>Modules</h3><ul>${modules.map(v=>`<li>${v}</li>`).join('')}</ul>
+ <h3>Travail pratique</h3><p>Produire une fiche d'observation comprenant : données utilisées, méthode, résultat, incertitudes et conclusion.</p>
+ <div class="quiz"><b>Question :</b> ${q}
+ <button onclick="this.nextElementSibling.textContent='✅ ${answer}'">Afficher la réponse</button>
+ <p></p></div>
+ <p><b>Objectif :</b> maîtriser les notions essentielles de cette version et préparer la suivante.</p>`;
+ document.getElementById('modal').classList.add('show');
+ document.getElementById('modal').classList.add('show');
+}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function answer(ok){document.getElementById('result').textContent=ok?'✅ Bonne réponse ! Le pli est une structure typique de déformation ductile.':'❌ Pas tout à fait. Recommence : pense à une structure qui se courbe sans rupture.'}
+document.getElementById('search').addEventListener('input',render);document.getElementById('filter').addEventListener('change',render);render();
+</script>
+</body></html>
