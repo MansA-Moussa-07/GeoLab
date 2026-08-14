@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -43,6 +43,21 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <div class="sectionhead"><div class="tag">LE PARCOURS</div><h2>Une progression structurée</h2><p>Chaque version ouvre un niveau de formation. Clique sur une carte pour afficher son objectif et ses modules.</p></div>
 <div class="stats">
 <div class="stat"><b>40</b>versions</div><div class="stat"><b>240+</b>modules</div><div class="stat"><b>6</b>domaines</div><div class="stat"><b>V40</b>projet final</div>
+</div>
+</section>
+
+<section id="dashboard">
+<div class="sectionhead"><div class="tag">TABLEAU DE BORD</div><h2>Mon espace apprenant</h2><p>Un résumé de ton parcours, enregistré localement sur cet appareil.</p></div>
+<div class="stats">
+<div class="stat"><b id="dashDone">0</b>versions validées</div>
+<div class="stat"><b id="dashRemaining">40</b>versions restantes</div>
+<div class="stat"><b id="dashNext">V01</b>prochaine étape</div>
+<div class="stat"><b id="dashRate">0%</b>progression</div>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Continuer mon parcours</h3>
+<p id="continueText">Commence par V01 — Fondamentaux de la géologie.</p>
+<a class="btn" id="continueBtn" href="#versions">Continuer →</a>
 </div>
 </section>
 
@@ -177,6 +192,14 @@ function updateProgress(){
  document.getElementById('progressText').textContent=`${n} / 40 versions validées`;
  document.getElementById('progressPercent').textContent=`${pct}%`;
  document.getElementById('progressBar').style.width=pct+'%';
+ const dashDone=document.getElementById('dashDone'), dashRemaining=document.getElementById('dashRemaining'), dashNext=document.getElementById('dashNext'), dashRate=document.getElementById('dashRate'), continueText=document.getElementById('continueText'), continueBtn=document.getElementById('continueBtn');
+ if(dashDone){
+   dashDone.textContent=n; dashRemaining.textContent=40-n; dashRate.textContent=pct+'%';
+   const next=data.find(x=>!p.includes(x[0]));
+   dashNext.textContent=next?next[0]:'V40 ✓';
+   if(next){continueText.textContent=`Continue avec ${next[0]} — ${next[1]}.`; continueBtn.onclick=()=>openModal(next);}
+   else{continueText.textContent='🎉 Parcours V01 → V40 terminé. Tu peux revoir les versions validées et reprendre le projet final.'; continueBtn.textContent='Revoir V40'; continueBtn.onclick=()=>openModal(data[data.length-1]);}
+ }
  const g=document.getElementById('progressGrid'); if(!g)return;
  g.innerHTML=data.map(x=>`<div class="card"><div class="code">${x[0]}</div><b>${p.includes(x[0])?'✅ Validée':'○ À étudier'}</b></div>`).join('');
 }
