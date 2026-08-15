@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#metamorphisme">Métamorphisme</a><a href="#sedimentologie">Sédimentologie</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#metamorphisme">Métamorphisme</a><a href="#sedimentologie">Sédimentologie</a><a href="#geomorphologie">Géomorphologie</a><a href="#historique">Histoire</a><a href="#volcanologie">Volcanologie</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -254,6 +254,99 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <h3>Défi : quel environnement ?</h3>
 <p>Associe chaque indice à un contexte : <b>chenal fluvial</b>, <b>plage</b>, <b>delta</b> ou <b>milieu marin profond</b>.</p>
 <button class="open" onclick="sedChallenge()">Lancer le défi</button><p id="sedChallenge"></p>
+</div>
+</section>
+
+
+<section id="geomorphologie">
+<div class="sectionhead"><div class="tag">GÉOMORPHOLOGIE · V16</div><h2>Reliefs, altération & érosion</h2>
+<p>Comprends comment l'eau, le vent, la glace, la gravité et l'altération transforment les paysages et le relief.</p></div>
+<div class="cards">
+<article class="card">
+<div class="tag">ALTÉRATION</div><h3>Roche → régolithe</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(180deg,#eef5f4,#d6a42d);display:flex;align-items:center;justify-content:center;font-size:48px">🪨 → 🌱</div>
+<p>L'altération physique et chimique transforme les roches en matériaux plus meubles et peut favoriser la formation des sols.</p>
+<button class="open" onclick="geomAnswer(1)">À retenir</button><p id="geom1"></p>
+</article>
+<article class="card">
+<div class="tag">ÉROSION</div><h3>Eau & gravité</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:46px">🌧️ → ⛰️ → 🌊</div>
+<p>Le ruissellement et les cours d'eau arrachent, transportent et déposent des sédiments selon leur énergie.</p>
+<button class="open" onclick="geomAnswer(2)">Comprendre</button><p id="geom2"></p>
+</article>
+<article class="card">
+<div class="tag">PROCESSUS</div><h3>Vent & glace</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:space-around;font-size:44px">💨 🧊</div>
+<p>Le vent peut déplacer les particules fines ; les glaciers érodent, transportent et déposent des matériaux.</p>
+<button class="open" onclick="geomAnswer(3)">Voir la synthèse</button><p id="geom3"></p>
+</article>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Défi paysage</h3>
+<p>Relie le processus dominant au paysage : <b>vallée en V</b>, <b>vallée en U</b>, <b>dune</b>.</p>
+<button class="open" onclick="geomChallenge()">Corriger</button><p id="geomChallenge"></p>
+</div>
+</section>
+
+
+<section id="historique">
+<div class="sectionhead"><div class="tag">GÉOLOGIE HISTORIQUE · V17</div><h2>Temps géologique, fossiles & histoire de la Terre</h2>
+<p>Reconstitue les événements du passé à partir des roches, des fossiles et des relations stratigraphiques.</p></div>
+<div class="cards">
+<article class="card">
+<div class="tag">TEMPS</div><h3>Échelle des temps géologiques</h3>
+<div style="height:200px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(180deg,#12343b 0 18%,#61757b 18% 42%,#d6a42d 42% 70%,#eef5f4 70%);display:flex;flex-direction:column;justify-content:space-around;padding:10px 22px;font-weight:700"><span>Précambrien</span><span>Paléozoïque</span><span>Mésozoïque</span><span>Cénozoïque</span></div>
+<p>Les subdivisions du temps géologique organisent l'histoire de la Terre à différentes échelles.</p>
+<button class="open" onclick="histAnswer(1)">À retenir</button><p id="hist1"></p>
+</article>
+<article class="card">
+<div class="tag">PALÉONTOLOGIE</div><h3>Fossiles indicateurs</h3>
+<div style="height:200px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:62px">🦴</div>
+<p>Certains fossiles ont une large répartition et une durée d'existence relativement courte : ils peuvent aider à corréler des couches.</p>
+<button class="open" onclick="histAnswer(2)">Comprendre</button><p id="hist2"></p>
+</article>
+<article class="card">
+<div class="tag">DATATION</div><h3>Relative vs absolue</h3>
+<div style="height:200px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;gap:25px;font-size:34px"><span>≺</span><span>⏳</span><span>≈</span></div>
+<p>La chronologie relative ordonne les événements ; la datation numérique fournit des âges estimés avec une méthode donnée.</p>
+<button class="open" onclick="histAnswer(3)">Voir la synthèse</button><p id="hist3"></p>
+</article>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Défi : remettre les événements dans l'ordre</h3>
+<p><b>A.</b> dépôt d'une couche · <b>B.</b> intrusion recoupant la couche · <b>C.</b> érosion de la surface</p>
+<button class="open" onclick="historyChallenge()">Corriger</button><p id="historyChallenge"></p>
+</div>
+</section>
+
+
+<section id="volcanologie">
+<div class="sectionhead"><div class="tag">VOLCANOLOGIE · V18</div><h2>Magmatisme, éruptions & risques</h2>
+<p>Comprends comment le magma se forme, remonte et produit des éruptions et des édifices volcaniques différents.</p></div>
+<div class="cards">
+<article class="card">
+<div class="tag">MAGMA</div><h3>De la profondeur à la surface</h3>
+<div style="height:200px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(180deg,#eef5f4 0 48%,#d6a42d 48%);position:relative;display:flex;align-items:center;justify-content:center;font-size:48px">🌋</div>
+<p>La remontée du magma dépend de sa densité, de sa viscosité, des fractures et des conditions de pression.</p>
+<button class="open" onclick="volcAnswer(1)">À retenir</button><p id="volc1"></p>
+</article>
+<article class="card">
+<div class="tag">ÉRUPTION</div><h3>Effusif vs explosif</h3>
+<div style="height:200px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:space-around;font-size:44px"><span>🌋〰️</span><span>🌋💥</span></div>
+<p>La viscosité du magma et sa teneur en volatils influencent fortement le style éruptif.</p>
+<button class="open" onclick="volcAnswer(2)">Comparer</button><p id="volc2"></p>
+</article>
+<article class="card">
+<div class="tag">RISQUES</div><h3>Produits volcaniques</h3>
+<div style="height:200px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;gap:20px;font-size:40px">🔥 🌫️ 🪨</div>
+<p>Laves, cendres, projections et coulées pyroclastiques peuvent produire des aléas différents selon le volcan et l'éruption.</p>
+<button class="open" onclick="volcAnswer(3)">Voir la synthèse</button><p id="volc3"></p>
+</article>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Défi volcanologique</h3>
+<p>Pourquoi un magma très visqueux peut-il favoriser une éruption explosive ?</p>
+<button class="open" onclick="volcanoChallenge()">Corriger</button><p id="volcanoChallenge"></p>
 </div>
 </section>
 
@@ -518,6 +611,39 @@ function sedAnswer(n){
 }
 function sedChallenge(){
  document.getElementById("sedChallenge").textContent="💡 Indices : galets et courant → chenal fluvial ; sable bien remanié et rides → plage ; alternances sable/boue → delta ; boues fines et dépôts gravitaires → marin profond.";
+}
+
+
+function geomAnswer(n){
+ const m={1:"Altération = transformation sur place de la roche par des processus physiques, chimiques ou biologiques.",
+ 2:"L'eau et la gravité contrôlent une grande partie du transfert des matériaux sur les versants et dans les bassins versants.",
+ 3:"Le vent privilégie souvent les particules fines et le glacier peut produire et déplacer des matériaux de tailles variées."};
+ document.getElementById("geom"+n).textContent="✅ "+m[n];
+}
+function geomChallenge(){
+ document.getElementById("geomChallenge").textContent="💡 Vallée en V → érosion fluviale ; vallée en U → érosion glaciaire ; dune → transport et dépôt éoliens.";
+}
+
+
+function histAnswer(n){
+ const m={1:"L'échelle des temps géologiques est une convention scientifique organisée en unités emboîtées, fondée sur les archives géologiques et biologiques.",
+ 2:"Un bon fossile stratigraphique combine notamment une durée d'existence relativement courte avec une large répartition géographique et une bonne reconnaissance.",
+ 3:"La chronologie relative ordonne les événements par leurs relations ; les méthodes numériques estiment un âge avec des principes physiques et une incertitude."};
+ document.getElementById("hist"+n).textContent="✅ "+m[n];
+}
+function historyChallenge(){
+ document.getElementById("historyChallenge").textContent="💡 Ordre relatif : A → B → C. Une intrusion qui recoupe une couche est postérieure à cette couche ; l'érosion décrite ensuite est postérieure à la surface qu'elle affecte.";
+}
+
+
+function volcAnswer(n){
+ const m={1:"Le magma peut remonter et se concentrer dans des réservoirs ou chambres magmatiques avant une éventuelle mise en place ou éruption.",
+ 2:"Un magma peu visqueux favorise généralement des écoulements plus fluides ; un magma plus visqueux peut piéger davantage de gaz et favoriser une fragmentation explosive.",
+ 3:"Les produits volcaniques comprennent notamment les coulées de lave, les cendres et les projections ; les courants pyroclastiques constituent un aléa particulièrement rapide et dangereux."};
+ document.getElementById("volc"+n).textContent="✅ "+m[n];
+}
+function volcanoChallenge(){
+ document.getElementById("volcanoChallenge").textContent="💡 La forte viscosité limite la circulation des gaz. La pression peut alors augmenter jusqu'à provoquer une fragmentation et une éruption explosive.";
 }
 
 </script>
