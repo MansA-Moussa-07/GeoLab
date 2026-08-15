@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#metamorphisme">Métamorphisme</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -189,6 +189,41 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 </article>
 </div>
 <div class="card" style="margin-top:18px"><h3>Schéma conceptuel</h3><p><b>Contraintes</b> → <b>déformation</b> → <b>structure</b> → <b>interprétation tectonique</b>. En terrain, confronte toujours le modèle aux observations.</p></div>
+</section>
+
+
+<section id="metamorphisme">
+<div class="sectionhead"><div class="tag">PÉTROLOGIE · V14</div><h2>Métamorphisme, faciès & foliation</h2>
+<p>Explore comment pression, température et fluides transforment une roche sans nécessairement la faire fondre.</p></div>
+<div class="cards">
+<article class="card">
+<div class="tag">TRANSFORMATION</div><h3>Roche métamorphique</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:54px">🪨 → 🔬</div>
+<p>Le métamorphisme modifie minéraux, texture et structure sous l'effet de nouvelles conditions physiques et chimiques.</p>
+<button class="open" onclick="metaAnswer(1)">À retenir</button><p id="meta1"></p>
+</article>
+<article class="card">
+<div class="tag">STRUCTURE</div><h3>Foliation</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:repeating-linear-gradient(12deg,#eef5f4 0,#eef5f4 14px,#d6a42d 15px,#d6a42d 18px);display:flex;align-items:center;justify-content:center;font-size:48px">〰️</div>
+<p>Une orientation préférentielle des minéraux peut produire une foliation, souvent liée à une déformation dirigée.</p>
+<button class="open" onclick="metaAnswer(2)">Comprendre</button><p id="meta2"></p>
+</article>
+<article class="card">
+<div class="tag">FACIÈS</div><h3>Conditions P–T</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(135deg,#eef5f4,#f7e7bd);display:flex;align-items:center;justify-content:center;font-size:42px">P ↕ + T ↗</div>
+<p>Un faciès métamorphique regroupe des assemblages minéralogiques indicateurs d'un domaine de pression-température.</p>
+<button class="open" onclick="metaAnswer(3)">Voir la synthèse</button><p id="meta3"></p>
+</article>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Mini-diagramme P–T</h3>
+<div style="height:220px;border-left:3px solid #12343b;border-bottom:3px solid #12343b;margin:15px 20px;position:relative">
+<span style="position:absolute;left:48%;bottom:55%;font-weight:700">domaine métamorphique</span>
+<span style="position:absolute;left:48%;bottom:-28px">Température →</span>
+<span style="position:absolute;left:-65px;bottom:45%;transform:rotate(-90deg)">Pression ↑</span>
+</div>
+<p>Objectif : relier un assemblage minéralogique aux conditions P–T et à l'histoire de la roche.</p>
+</div>
 </section>
 
 <section id="parcours">
@@ -433,6 +468,14 @@ function defAnswer(n){
  2:"Fragile : rupture, fracturation et failles. Ductile : déformation continue, plis et structures de fluage.",
  3:"Une hausse de température et de pression, ainsi que la présence de fluides et une vitesse de déformation adaptée, peuvent favoriser un comportement ductile."};
  document.getElementById("def"+n).textContent="✅ "+m[n];
+}
+
+
+function metaAnswer(n){
+ const m={1:"Le métamorphisme se produit à l'état solide : la roche s'adapte à de nouvelles conditions sans fusion complète.",
+ 2:"La foliation correspond à une organisation planaire préférentielle des minéraux, souvent favorisée par une contrainte dirigée.",
+ 3:"Les assemblages minéralogiques servent d'indicateurs des conditions de pression et de température ; le trajet P–T aide à reconstruire l'histoire."};
+ document.getElementById("meta"+n).textContent="✅ "+m[n];
 }
 
 </script>
