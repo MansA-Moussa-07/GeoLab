@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -110,6 +110,28 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <div class="sectionhead"><div class="tag">LABORATOIRE · V10</div><h2>Laboratoire de minéralogie & pétrologie</h2>
 <p>Observe les critères, compare les propriétés et entraîne-toi à identifier quelques minéraux et roches courants.</p></div>
 <div class="grid" id="labGrid"></div>
+</section>
+
+
+<section id="structural">
+<div class="sectionhead"><div class="tag">STRUCTURALE & TECTONIQUE · V11</div><h2>Laboratoire de géologie structurale</h2>
+<p>Entraîne-toi à lire une attitude, distinguer les régimes de déformation et reconnaître les structures principales.</p></div>
+<div class="cards">
+<article class="card"><div class="tag">EXERCICE A</div><h3>Direction & pendage</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;position:relative;overflow:hidden">
+<div style="position:absolute;left:8%;top:45%;width:85%;height:5px;background:#d6a42d;transform:rotate(-22deg)"></div>
+<div style="position:absolute;left:50%;top:25%;height:110px;border-left:3px dashed #12343b;transform:rotate(68deg)"></div></div>
+<p>Une couche est inclinée. Distingue sa direction de son pendage avant toute interprétation.</p>
+<button class="open" onclick="structAnswer(1)">Afficher l'aide</button><p id="structA"></p></article>
+<article class="card"><div class="tag">EXERCICE B</div><h3>Régime tectonique</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;gap:45px;font-size:40px">← 🪨 →</div>
+<p>Deux blocs s'éloignent. Quel régime de contrainte est illustré ?</p>
+<button class="open" onclick="structAnswer(2)">Répondre</button><p id="structB"></p></article>
+<article class="card"><div class="tag">EXERCICE C</div><h3>Pli ou faille ?</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:repeating-linear-gradient(160deg,#fff 0,#fff 22px,#d6a42d 23px,#d6a42d 27px);display:flex;align-items:center;justify-content:center;font-size:55px">〰️</div>
+<p>La géométrie se courbe sans rupture apparente. Quelle structure reconnais-tu ?</p>
+<button class="open" onclick="structAnswer(3)">Répondre</button><p id="structC"></p></article>
+</div>
 </section>
 
 <section id="parcours">
@@ -331,6 +353,14 @@ function labQuiz(i){
  document.getElementById('modal').classList.add('show');
 }
 renderLab();
+
+
+function structAnswer(n){
+ const m={1:"La direction indique l'orientation de la ligne horizontale du plan ; le pendage donne l'inclinaison maximale et son sens.",
+ 2:"Un régime extensif : les contraintes écartent les blocs et peuvent favoriser des failles normales.",
+ 3:"Un pli : les couches sont courbées. Une faille implique un déplacement relatif le long d'une rupture."};
+ const ids={1:"structA",2:"structB",3:"structC"};document.getElementById(ids[n]).textContent="✅ "+m[n];
+}
 
 </script>
 </body></html>
