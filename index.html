@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#metamorphisme">Métamorphisme</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#metamorphisme">Métamorphisme</a><a href="#sedimentologie">Sédimentologie</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -223,6 +223,37 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <span style="position:absolute;left:-65px;bottom:45%;transform:rotate(-90deg)">Pression ↑</span>
 </div>
 <p>Objectif : relier un assemblage minéralogique aux conditions P–T et à l'histoire de la roche.</p>
+</div>
+</section>
+
+
+<section id="sedimentologie">
+<div class="sectionhead"><div class="tag">SÉDIMENTOLOGIE · V15</div><h2>Processus, faciès & environnements de dépôt</h2>
+<p>Apprends à relier transport, énergie, granulométrie et structures sédimentaires à un environnement de dépôt.</p></div>
+<div class="cards">
+<article class="card">
+<div class="tag">TRANSPORT</div><h3>Érosion → transport → dépôt</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:38px">⛰️ → 🌊 → 🏖️</div>
+<p>Les particules sont arrachées, transportées puis déposées lorsque l'énergie du milieu diminue.</p>
+<button class="open" onclick="sedAnswer(1)">À retenir</button><p id="sed1"></p>
+</article>
+<article class="card">
+<div class="tag">GRANULOMÉTRIE</div><h3>Taille des grains</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(90deg,#12343b 0 18%,#61757b 18% 38%,#d6a42d 38% 62%,#eef5f4 62%);display:flex;align-items:center;justify-content:center;color:white;font-weight:700">Gros → Fin</div>
+<p>La taille des grains renseigne sur l'énergie et les conditions de transport, mais doit être interprétée avec les autres indices.</p>
+<button class="open" onclick="sedAnswer(2)">Comprendre</button><p id="sed2"></p>
+</article>
+<article class="card">
+<div class="tag">STRUCTURES</div><h3>Stratification & rides</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:repeating-linear-gradient(8deg,#fff 0,#fff 17px,#d6a42d 18px,#d6a42d 22px);display:flex;align-items:center;justify-content:center;font-size:44px">〰️</div>
+<p>Les lamines, rides et stratifications enregistrent les conditions de courant, de vagues ou de dépôt.</p>
+<button class="open" onclick="sedAnswer(3)">Voir la synthèse</button><p id="sed3"></p>
+</article>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Défi : quel environnement ?</h3>
+<p>Associe chaque indice à un contexte : <b>chenal fluvial</b>, <b>plage</b>, <b>delta</b> ou <b>milieu marin profond</b>.</p>
+<button class="open" onclick="sedChallenge()">Lancer le défi</button><p id="sedChallenge"></p>
 </div>
 </section>
 
@@ -476,6 +507,17 @@ function metaAnswer(n){
  2:"La foliation correspond à une organisation planaire préférentielle des minéraux, souvent favorisée par une contrainte dirigée.",
  3:"Les assemblages minéralogiques servent d'indicateurs des conditions de pression et de température ; le trajet P–T aide à reconstruire l'histoire."};
  document.getElementById("meta"+n).textContent="✅ "+m[n];
+}
+
+
+function sedAnswer(n){
+ const m={1:"Le dépôt intervient quand l'énergie du milieu ne permet plus de maintenir les particules en transport.",
+ 2:"En général, les milieux plus énergétiques peuvent mobiliser des grains plus grossiers ; la sélection et la distance de transport modifient aussi le signal.",
+ 3:"La stratification et les rides sont des archives du mode de transport et des conditions hydrodynamiques au moment du dépôt."};
+ document.getElementById("sed"+n).textContent="✅ "+m[n];
+}
+function sedChallenge(){
+ document.getElementById("sedChallenge").textContent="💡 Indices : galets et courant → chenal fluvial ; sable bien remanié et rides → plage ; alternances sable/boue → delta ; boues fines et dépôts gravitaires → marin profond.";
 }
 
 </script>
