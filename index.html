@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -162,6 +162,33 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <h3>Chronologie tectonique</h3>
 <p>Une structure n'est pas seulement une forme : elle raconte une succession d'événements. Pour une interprétation robuste, combine relations de recoupement, structures, datations et observations de terrain.</p>
 </div>
+</section>
+
+
+<section id="deformation">
+<div class="sectionhead"><div class="tag">DÉFORMATION · V13</div><h2>Contraintes, déformation & rhéologie</h2>
+<p>Comprends comment une roche répond aux contraintes et pourquoi une même roche peut se comporter différemment selon les conditions.</p></div>
+<div class="cards">
+<article class="card">
+<div class="tag">CONTRAINTE</div><h3>Compression</h3>
+<div style="height:180px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:44px">→ 🪨 ←</div>
+<p>Le matériau est raccourci. Relie ce mécanisme aux plis et aux structures compressives.</p>
+<button class="open" onclick="defAnswer(1)">Voir l'explication</button><p id="def1"></p>
+</article>
+<article class="card">
+<div class="tag">DÉFORMATION</div><h3>Fragile vs ductile</h3>
+<div style="height:180px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:space-around;font-size:38px"><span>💥</span><span>〰️</span></div>
+<p>Rupture et déplacement d'un côté ; courbure et écoulement de l'autre.</p>
+<button class="open" onclick="defAnswer(2)">Comparer</button><p id="def2"></p>
+</article>
+<article class="card">
+<div class="tag">CONDITIONS</div><h3>Température & pression</h3>
+<div style="height:180px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(90deg,#eef5f4,#f7e7bd);display:flex;align-items:center;justify-content:center;font-size:38px">🌡️ + ⬇️</div>
+<p>Température, pression, vitesse de déformation et fluides influencent le comportement des roches.</p>
+<button class="open" onclick="defAnswer(3)">À retenir</button><p id="def3"></p>
+</article>
+</div>
+<div class="card" style="margin-top:18px"><h3>Schéma conceptuel</h3><p><b>Contraintes</b> → <b>déformation</b> → <b>structure</b> → <b>interprétation tectonique</b>. En terrain, confronte toujours le modèle aux observations.</p></div>
 </section>
 
 <section id="parcours">
@@ -398,6 +425,14 @@ function tectAnswer(n){
  2:"Compression → plis, chevauchements et raccourcissement de la croûte.",
  3:"Cisaillement → déplacement principalement horizontal le long d'un décrochement."};
  document.getElementById("tect"+n).textContent="✅ "+m[n];
+}
+
+
+function defAnswer(n){
+ const m={1:"La compression correspond à un état de contrainte qui tend à raccourcir le matériau.",
+ 2:"Fragile : rupture, fracturation et failles. Ductile : déformation continue, plis et structures de fluage.",
+ 3:"Une hausse de température et de pression, ainsi que la présence de fluides et une vitesse de déformation adaptée, peuvent favoriser un comportement ductile."};
+ document.getElementById("def"+n).textContent="✅ "+m[n];
 }
 
 </script>
