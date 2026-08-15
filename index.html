@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -38,6 +38,37 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <p>Un parcours progressif de 40 versions pour apprendre la géologie, l'exploration, le SIG, la géophysique, la géostatistique et la géologie minière.</p>
 <a class="btn" href="#versions">Explorer les 40 versions →</a>
 </header>
+
+
+<section id="images">
+<div class="sectionhead"><div class="tag">ATLAS VISUEL · V6</div><h2>Voir et comprendre la géologie</h2><p>Des illustrations accompagnent les notions clés.</p></div>
+<div class="cards">
+<article class="card" style="padding:0;overflow:hidden">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Faults_and_folds.jpg" alt="Schéma de plis et failles" style="width:100%;height:240px;object-fit:cover" loading="lazy">
+<div style="padding:18px"><div class="code">STRUCTURES</div><h3>Plis et failles</h3><p>Lecture des principales structures tectoniques.</p></div>
+</article>
+<article class="card" style="padding:0;overflow:hidden">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Faultbendfold.png" alt="Exemple de fault-bend fold" style="width:100%;height:240px;object-fit:cover" loading="lazy">
+<div style="padding:18px"><div class="code">TECTONIQUE</div><h3>Fault-bend fold</h3><p>Exemple de pli lié à une géométrie de faille.</p></div>
+</article>
+</div>
+<p style="font-size:13px;color:#61757b">Illustrations : Wikimedia Commons, avec liens vers les sources dans les versions publiées.</p>
+</section>
+
+
+<section id="atlas">
+<div class="sectionhead"><div class="tag">GALERIE GÉOLOGIQUE · V7</div><h2>Atlas visuel GeoLab</h2>
+<p>Une image pour chaque grande famille de notions. Les illustrations sont chargées depuis Wikimedia Commons et les sources sont accessibles.</p></div>
+<div class="grid">
+<article class="card" style="padding:0;overflow:hidden"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Faults_and_folds.jpg" alt="Plis et failles" style="width:100%;height:200px;object-fit:cover" loading="lazy"><div style="padding:16px"><div class="code">V11–V20</div><h3>Structure & tectonique</h3><p>Plis, failles et déformation.</p></div></article>
+<article class="card" style="padding:0;overflow:hidden"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Faultbendfold.png" alt="Fault bend fold" style="width:100%;height:200px;object-fit:cover" loading="lazy"><div style="padding:16px"><div class="code">V15–V20</div><h3>Plissement</h3><p>Géométrie et cinématique.</p></div></article>
+<article class="card" style="padding:0;overflow:hidden"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Geologic_map_symbol.svg" alt="Symboles de carte géologique" style="width:100%;height:200px;object-fit:contain;background:#eef5f4" loading="lazy"><div style="padding:16px"><div class="code">V09</div><h3>Cartographie</h3><p>Lire et construire une carte géologique.</p></div></article>
+<article class="card" style="padding:0;overflow:hidden"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Stratigraphic_column.svg" alt="Colonne stratigraphique" style="width:100%;height:200px;object-fit:contain;background:#eef5f4" loading="lazy"><div style="padding:16px"><div class="code">V04–V08</div><h3>Stratigraphie</h3><p>Empilement et succession des terrains.</p></div></article>
+<article class="card" style="padding:0;overflow:hidden"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Volcanic_eruption.jpg" alt="Éruption volcanique" style="width:100%;height:200px;object-fit:cover" loading="lazy"><div style="padding:16px"><div class="code">V03 · V18</div><h3>Volcanisme</h3><p>Processus magmatiques et géodynamiques.</p></div></article>
+<article class="card" style="padding:0;overflow:hidden"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Seismic_wave.svg" alt="Ondes sismiques" style="width:100%;height:200px;object-fit:contain;background:#eef5f4" loading="lazy"><div style="padding:16px"><div class="code">V39</div><h3>Géophysique</h3><p>Ondes et exploration du sous-sol.</p></div></article>
+</div>
+<p style="font-size:13px;color:#61757b;margin-top:15px">Les images sont illustratives ; les sources Wikimedia Commons peuvent être ouvertes directement depuis les cartes.</p>
+</section>
 
 <section id="parcours">
 <div class="sectionhead"><div class="tag">LE PARCOURS</div><h2>Une progression structurée</h2><p>Chaque version ouvre un niveau de formation. Clique sur une carte pour afficher son objectif et ses modules.</p></div>
@@ -89,10 +120,10 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <section id="quiz" class="final">
 <div class="sectionhead"><div class="tag">MINI-QUIZ</div><h2>Teste tes connaissances</h2></div>
 <div class="quiz"><b>Question :</b> Quel type de structure résulte généralement d'une déformation ductile compressive ?
-<button onclick="answer(false)">A — Une faille normale</button>
-<button onclick="answer(true)">B — Un pli</button>
-<button onclick="answer(false)">C — Une cheminée volcanique</button>
-<p id="result"></p></div>
+<button onclick="scoreQuiz(false)">A — Une faille normale</button>
+<button onclick="scoreQuiz(true)">B — Un pli</button>
+<button onclick="scoreQuiz(false)">C — Une cheminée volcanique</button>
+<p id="result"></p><p><b>Meilleur score :</b> <span id="quizScore">0%</span></p><button class="btn" onclick="resetQuiz()" style="margin-left:8px">Réinitialiser le score</button></div>
 </section>
 
 <footer>Geo<span class="gold">Lab</span> · Plateforme pédagogique de géologie · V01 → V40</footer>
@@ -182,7 +213,7 @@ function openModal(x){
  document.getElementById('modal').classList.add('show');
 }
 function closeModal(){document.getElementById('modal').classList.remove('show')}
-function answer(ok){document.getElementById('result').textContent=ok?'✅ Bonne réponse ! Le pli est une structure typique de déformation ductile.':'❌ Pas tout à fait. Recommence : pense à une structure qui se courbe sans rupture.'}
+function scoreQuiz(ok){const k='geolab_quiz_v6';const old=JSON.parse(localStorage.getItem(k)||'{"score":0}');const score=ok?100:0;if(score>old.score)old.score=score;localStorage.setItem(k,JSON.stringify(old));document.getElementById('quizScore').textContent=old.score+'%';document.getElementById('result').textContent=ok?'✅ Bonne réponse ! Le pli est une structure typique de déformation ductile.':'❌ Pas tout à fait. Pense à une structure qui se courbe sans rupture.'}
 
 const PROGRESS_KEY='geolab_progress_v4';
 function getProgress(){try{return JSON.parse(localStorage.getItem(PROGRESS_KEY)||'[]')}catch(e){return[]}}
@@ -211,5 +242,6 @@ document.getElementById('search').addEventListener('input',render);
 document.getElementById('filter').addEventListener('change',render);
 render(); updateProgress();
 
+function resetQuiz(){localStorage.removeItem('geolab_quiz_v6');document.getElementById('quizScore').textContent='0%';document.getElementById('result').textContent='Score réinitialisé.'}
 </script>
 </body></html>
