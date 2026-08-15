@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -75,6 +75,41 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <div class="sectionhead"><div class="tag">FICHES · V8</div><h2>Fiches géologiques interactives</h2><p>Recherche une fiche pour réviser rapidement une notion, une roche ou une structure.</p></div>
 <div class="toolbar"><input id="ficheSearch" class="search" placeholder="🔎 Rechercher : granite, faille, basalte..."></div>
 <div id="ficheGrid" class="grid"></div>
+</section>
+
+
+<section id="cartes">
+<div class="sectionhead"><div class="tag">CARTOGRAPHIE · V9</div><h2>Cartes & coupes géologiques</h2><p>Un espace d'entraînement pour passer d'une carte à une coupe et raisonner sur la géométrie du sous-sol.</p></div>
+<div class="cards">
+<article class="card">
+<div class="tag">EXERCICE 01</div><h3>Lire une carte</h3>
+<p>Identifie les contacts, les unités et le sens général du pendage avant de construire une coupe.</p>
+<div style="height:180px;border:1px solid #dce6e8;border-radius:7px;background:repeating-linear-gradient(135deg,#eef5f4 0,#eef5f4 18px,#fff 18px,#fff 36px);position:relative;overflow:hidden">
+<div style="position:absolute;left:10%;top:45%;width:80%;height:3px;background:#d6a42d;transform:rotate(-12deg)"></div>
+<div style="position:absolute;left:20%;top:28%;width:60%;height:3px;background:#12343b;transform:rotate(8deg)"></div>
+</div>
+<p><b>Défi :</b> quelle information supplémentaire faut-il pour construire une coupe fiable ?</p>
+<button class="open" onclick="showMapAnswer(1)">Afficher la réponse</button><p id="mapAnswer1"></p>
+</article>
+<article class="card">
+<div class="tag">EXERCICE 02</div><h3>Construire une coupe</h3>
+<p>Imagine une succession de couches inclinées traversées par une faille. Place d'abord les unités, puis la structure.</p>
+<div style="height:180px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;position:relative;overflow:hidden">
+<div style="position:absolute;left:8%;top:35%;width:90%;height:4px;background:#d6a42d;transform:rotate(18deg)"></div>
+<div style="position:absolute;left:8%;top:65%;width:90%;height:4px;background:#12343b;transform:rotate(18deg)"></div>
+<div style="position:absolute;left:48%;top:5%;width:4px;height:110%;background:#7b8b8f;transform:rotate(25deg)"></div>
+</div>
+<p><b>Défi :</b> distingue géométrie, chronologie et sens du mouvement.</p>
+<button class="open" onclick="showMapAnswer(2)">Afficher la réponse</button><p id="mapAnswer2"></p>
+</article>
+</div>
+</section>
+
+
+<section id="labo">
+<div class="sectionhead"><div class="tag">LABORATOIRE · V10</div><h2>Laboratoire de minéralogie & pétrologie</h2>
+<p>Observe les critères, compare les propriétés et entraîne-toi à identifier quelques minéraux et roches courants.</p></div>
+<div class="grid" id="labGrid"></div>
 </section>
 
 <section id="parcours">
@@ -273,6 +308,29 @@ function openFiche(x){
  document.getElementById('modal').classList.add('show');
 }
 document.getElementById('ficheSearch')?.addEventListener('input',renderFiches);renderFiches();
+
+
+function showMapAnswer(n){
+ const e=document.getElementById('mapAnswer'+n);
+ e.textContent=n===1?'✅ Il faut notamment les attitudes des couches (direction et pendage), l’échelle et une topographie adaptée.':'✅ On place les contacts dans leur ordre, on projette leurs intersections avec le profil, puis on interprète la faille et la chronologie.';
+}
+
+
+const labItems=[
+["Quartz","MINÉRAL","Dureté 7 · éclat vitreux · pas de clivage net","https://commons.wikimedia.org/wiki/Special:FilePath/Quartz,_Tibet.jpg","Quel test simple aide à confirmer sa dureté ?","Le test de rayure, comparé à une échelle de dureté."],
+["Calcite","MINÉRAL","Dureté 3 · clivage rhomboédrique · réaction à l'acide dilué","https://commons.wikimedia.org/wiki/Special:FilePath/Calcite-20110531.jpg","Quel indice est particulièrement diagnostique ?","Une effervescence avec un acide dilué, selon les conditions."],
+["Granite","ROCHE","Roche magmatique plutonique · texture grenue","https://commons.wikimedia.org/wiki/Special:FilePath/Granite.jpg","Pourquoi les cristaux sont-ils visibles ?","Le refroidissement lent en profondeur favorise leur croissance."],
+["Basalte","ROCHE","Roche volcanique · texture généralement fine","https://commons.wikimedia.org/wiki/Special:FilePath/BasaltUSGOV.jpg","Pourquoi la texture est-elle fine ?","Le refroidissement rapide limite la croissance des cristaux."]
+];
+function renderLab(){
+ const g=document.getElementById('labGrid'); if(!g)return; g.innerHTML=labItems.map((x,i)=>`<article class="card" style="padding:0;overflow:hidden"><img src="${x[3]}" alt="${x[0]}" loading="lazy" style="width:100%;height:190px;object-fit:cover;background:#eef5f4"><div style="padding:17px"><div class="code">${x[1]}</div><h3>${x[0]}</h3><p>${x[2]}</p><button class="open" onclick="labQuiz(${i})">🔬 Identifier</button></div></article>`).join('');
+}
+function labQuiz(i){
+ const x=labItems[i];
+ document.getElementById('modalContent').innerHTML=`<img src="${x[3]}" alt="${x[0]}" style="width:100%;max-height:300px;object-fit:contain;background:#eef5f4;border-radius:7px"><div class="tag" style="margin-top:18px">${x[1]}</div><h2>${x[0]}</h2><p>${x[2]}</p><div class="quiz"><b>Question :</b> ${x[4]}<button onclick="this.nextElementSibling.textContent='✅ ${x[5]}'">Afficher la correction</button><p></p></div>`;
+ document.getElementById('modal').classList.add('show');
+}
+renderLab();
 
 </script>
 </body></html>
