@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -131,6 +131,36 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:repeating-linear-gradient(160deg,#fff 0,#fff 22px,#d6a42d 23px,#d6a42d 27px);display:flex;align-items:center;justify-content:center;font-size:55px">〰️</div>
 <p>La géométrie se courbe sans rupture apparente. Quelle structure reconnais-tu ?</p>
 <button class="open" onclick="structAnswer(3)">Répondre</button><p id="structC"></p></article>
+</div>
+</section>
+
+
+<section id="tectonique">
+<div class="sectionhead"><div class="tag">TECTONIQUE · V12</div><h2>Laboratoire tectonique</h2>
+<p>Relie les structures observées aux mouvements des plaques et aux régimes de déformation.</p></div>
+<div class="cards">
+<article class="card">
+<div class="tag">EXTENSION</div><h3>Divergence</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;position:relative;display:flex;align-items:center;justify-content:center;font-size:42px">← 🌍 →</div>
+<p>Les blocs s'écartent. Relie ce contexte aux failles normales et à la création de croûte.</p>
+<button class="open" onclick="tectAnswer(1)">Voir la synthèse</button><p id="tect1"></p>
+</article>
+<article class="card">
+<div class="tag">COMPRESSION</div><h3>Convergence</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">→ 🪨 ←</div>
+<p>Les blocs se rapprochent. Observe plis, chevauchements et raccourcissement.</p>
+<button class="open" onclick="tectAnswer(2)">Voir la synthèse</button><p id="tect2"></p>
+</article>
+<article class="card">
+<div class="tag">CISAILLEMENT</div><h3>Décrochement</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">↗️ 🪨 ↙️</div>
+<p>Le mouvement est principalement horizontal. Analyse la cinématique avant de conclure.</p>
+<button class="open" onclick="tectAnswer(3)">Voir la synthèse</button><p id="tect3"></p>
+</article>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Chronologie tectonique</h3>
+<p>Une structure n'est pas seulement une forme : elle raconte une succession d'événements. Pour une interprétation robuste, combine relations de recoupement, structures, datations et observations de terrain.</p>
 </div>
 </section>
 
@@ -360,6 +390,14 @@ function structAnswer(n){
  2:"Un régime extensif : les contraintes écartent les blocs et peuvent favoriser des failles normales.",
  3:"Un pli : les couches sont courbées. Une faille implique un déplacement relatif le long d'une rupture."};
  const ids={1:"structA",2:"structB",3:"structC"};document.getElementById(ids[n]).textContent="✅ "+m[n];
+}
+
+
+function tectAnswer(n){
+ const m={1:"Extension → failles normales, amincissement et, selon le contexte, création de nouvelle croûte.",
+ 2:"Compression → plis, chevauchements et raccourcissement de la croûte.",
+ 3:"Cisaillement → déplacement principalement horizontal le long d'un décrochement."};
+ document.getElementById("tect"+n).textContent="✅ "+m[n];
 }
 
 </script>
