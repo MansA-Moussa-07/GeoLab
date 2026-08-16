@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#metamorphisme">Métamorphisme</a><a href="#sedimentologie">Sédimentologie</a><a href="#geomorphologie">Géomorphologie</a><a href="#historique">Histoire</a><a href="#volcanologie">Volcanologie</a><a href="#geophysique">Géophysique</a><a href="#geodynamique">Géodynamique</a><a href="#cartoavancee">Cartographie</a><a href="#hydrogeologie">Hydrogéologie</a><a href="#geochimie">Géochimie</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#metamorphisme">Métamorphisme</a><a href="#sedimentologie">Sédimentologie</a><a href="#geomorphologie">Géomorphologie</a><a href="#historique">Histoire</a><a href="#volcanologie">Volcanologie</a><a href="#geophysique">Géophysique</a><a href="#geodynamique">Géodynamique</a><a href="#cartoavancee">Cartographie</a><a href="#hydrogeologie">Hydrogéologie</a><a href="#geochimie">Géochimie</a><a href="#geologieeco">Géologie économique</a><a href="#enviro">Environnement</a><a href="#petrole">Géologie pétrolière</a><a href="#miniereavancee">Géologie minière</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -495,6 +495,121 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 </div>
 </section>
 
+
+<section id="geologieeco">
+<div class="sectionhead"><div class="tag">GÉOLOGIE ÉCONOMIQUE · V24</div><h2>Minerais, gisements & prospection</h2>
+<p>Comprends pourquoi certains éléments se concentrent naturellement et comment les géologues évaluent un potentiel minéral.</p></div>
+<div class="cards">
+<article class="card">
+<div class="tag">MINERAI</div><h3>Minéral utile vs gangue</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;gap:18px;font-size:42px">💎 + 🪨</div>
+<p>Un minerai contient une substance utile pouvant être extraite économiquement ; la gangue correspond aux matériaux associés sans valeur économique recherchée.</p>
+<button class="open" onclick="ecoAnswer(1)">À retenir</button><p id="eco1"></p>
+</article>
+<article class="card">
+<div class="tag">CONCENTRATION</div><h3>Comment se forme un gisement ?</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(135deg,#eef5f4,#d6a42d);display:flex;align-items:center;justify-content:center;font-size:44px">🌋 → 💎</div>
+<p>Des processus magmatiques, hydrothermaux, sédimentaires ou supergènes peuvent concentrer certains éléments jusqu'à former une anomalie exploitable.</p>
+<button class="open" onclick="ecoAnswer(2)">Comprendre</button><p id="eco2"></p>
+</article>
+<article class="card">
+<div class="tag">PROSPECTION</div><h3>Indices & méthodes</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">🗺️ 🔬 📡</div>
+<p>Cartographie, géochimie, géophysique et échantillonnage permettent de rechercher et caractériser des anomalies avant les travaux de détail.</p>
+<button class="open" onclick="ecoAnswer(3)">Voir la synthèse</button><p id="eco3"></p>
+</article>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Défi : anomalie ou gisement ?</h3>
+<p>Une anomalie géochimique élevée suffit-elle à prouver l'existence d'un gisement exploitable ?</p>
+<button class="open" onclick="ecoChallenge()">Corriger</button><p id="ecoChallenge"></p>
+</div>
+</section>
+
+
+<section id="enviro">
+<div class="sectionhead"><div class="tag">GÉOLOGIE ENVIRONNEMENTALE · V25</div><h2>Risques, sols & eaux</h2>
+<p>Analyse les interactions entre géologie, activités humaines, ressources et risques afin de mieux diagnostiquer et gérer les sites.</p></div>
+<div class="cards">
+<article class="card">
+<div class="tag">EAU</div><h3>Pollution & transport</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(#eef5f4 0 45%,#61757b 45%);position:relative"><span style="position:absolute;left:18%;top:18%;font-size:34px">💧</span><span style="position:absolute;left:52%;top:55%;font-size:34px">➡️</span></div>
+<p>Un contaminant peut être dissous, adsorbé sur les grains ou transporté avec l'eau souterraine selon ses propriétés et celles du milieu.</p>
+<button class="open" onclick="envAnswer(1)">À retenir</button><p id="env1"></p>
+</article>
+<article class="card">
+<div class="tag">RISQUES</div><h3>Aléas géologiques</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:space-around;font-size:42px">🌋 🪨 🌊</div>
+<p>Séismes, glissements, éruptions et érosion peuvent devenir des risques lorsqu'ils rencontrent des enjeux humains et des vulnérabilités.</p>
+<button class="open" onclick="envAnswer(2)">Comprendre</button><p id="env2"></p>
+</article>
+<article class="card">
+<div class="tag">DIAGNOSTIC</div><h3>Observer avant d'agir</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">🗺️ 🔬 💧</div>
+<p>Un diagnostic combine historique du site, géologie, échantillonnage, analyses et modèle conceptuel avant de choisir une mesure de gestion.</p>
+<button class="open" onclick="envAnswer(3)">Voir la méthode</button><p id="env3"></p>
+</article>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Défi environnemental</h3>
+<p>Pourquoi la présence d'un contaminant dans un sol ne signifie-t-elle pas automatiquement qu'une nappe est contaminée ?</p>
+<button class="open" onclick="envChallenge()">Corriger</button><p id="envChallenge"></p>
+</div>
+</section>
+
+
+<section id="petrole">
+<div class="sectionhead"><div class="tag">GÉOLOGIE PÉTROLIÈRE · V26</div><h2>Système pétrolier, réservoirs & pièges</h2>
+<p>Comprends les éléments et processus nécessaires à l'accumulation naturelle d'hydrocarbures dans le sous-sol.</p></div>
+<div class="cards">
+<article class="card">
+<div class="tag">ROCHE-MÈRE</div><h3>Génération</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:48px">🪨 → 🛢️</div>
+<p>Une roche-mère riche en matière organique peut générer des hydrocarbures lorsque l'enfouissement et la maturation atteignent des conditions favorables.</p>
+<button class="open" onclick="petroAnswer(1)">À retenir</button><p id="petro1"></p>
+</article>
+<article class="card">
+<div class="tag">RÉSERVOIR</div><h3>Porosité & perméabilité</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">⚪⚪ → 🛢️</div>
+<p>Une roche réservoir doit présenter des espaces poreux pour stocker les fluides et une connectivité suffisante pour permettre leur déplacement.</p>
+<button class="open" onclick="petroAnswer(2)">Comprendre</button><p id="petro2"></p>
+</article>
+<article class="card">
+<div class="tag">PIÈGE</div><h3>Couverture & accumulation</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(#61757b 0 28%,#d6a42d 28% 58%,#eef5f4 58%);display:flex;align-items:center;justify-content:center;font-size:42px">🛢️ ⛰️</div>
+<p>Une couverture peu perméable et une géométrie de piège peuvent empêcher la migration des hydrocarbures et favoriser leur accumulation.</p>
+<button class="open" onclick="petroAnswer(3)">Voir la synthèse</button><p id="petro3"></p>
+</article>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Défi : système pétrolier</h3>
+<p>Pourquoi la présence d'une roche réservoir ne suffit-elle pas à garantir une accumulation d'hydrocarbures ?</p>
+<button class="open" onclick="petroChallenge()">Corriger</button><p id="petroChallenge"></p>
+</div>
+</section>
+
+
+<section id="miniereavancee">
+<div class="sectionhead"><div class="tag">GÉOLOGIE MINIÈRE · V27</div><h2>Exploration, teneur, ressources & réserves</h2>
+<p>Apprends à passer de l'indice minéralisé à une évaluation structurée d'une ressource, sans confondre potentiel géologique et réserve exploitable.</p></div>
+<div class="cards">
+<article class="card"><div class="tag">EXPLORATION</div><h3>De l'indice au modèle</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">🗺️ → 🔬 → ⛏️</div>
+<p>La cartographie, la géochimie, la géophysique et les sondages servent à localiser, caractériser et modéliser une minéralisation.</p>
+<button class="open" onclick="mineAnswer(1)">À retenir</button><p id="mine1"></p></article>
+<article class="card"><div class="tag">TENEUR</div><h3>Concentration & volume</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(135deg,#eef5f4,#d6a42d);display:flex;align-items:center;justify-content:center;font-size:42px">📊 💎</div>
+<p>La teneur indique la concentration de la substance utile. Elle doit être interprétée avec le tonnage, la distribution, la récupération et le contexte économique.</p>
+<button class="open" onclick="mineAnswer(2)">Comprendre</button><p id="mine2"></p></article>
+<article class="card"><div class="tag">RESSOURCES</div><h3>Ressource ≠ réserve</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">🪨 → 📦</div>
+<p>Une ressource concerne une concentration minérale présentant un potentiel. Une réserve correspond à la partie pouvant être exploitée économiquement dans des conditions définies.</p>
+<button class="open" onclick="mineAnswer(3)">Voir la synthèse</button><p id="mine3"></p></article>
+</div>
+<div class="card" style="margin-top:18px"><h3>Défi minier</h3><p>Une forte teneur suffit-elle à elle seule pour déclarer une réserve ?</p>
+<button class="open" onclick="mineChallenge()">Corriger</button><p id="mineChallenge"></p></div>
+</section>
+
 <section id="parcours">
 <div class="sectionhead"><div class="tag">LE PARCOURS</div><h2>Une progression structurée</h2><p>Chaque version ouvre un niveau de formation. Clique sur une carte pour afficher son objectif et ses modules.</p></div>
 <div class="stats">
@@ -847,6 +962,58 @@ function chemAnswer(n){
 }
 function chemChallenge(){
  document.getElementById("chemChallenge").textContent="💡 Le pH influence les réactions de dissolution, précipitation et surface des minéraux ; une variation de pH peut donc modifier leur stabilité et leur vitesse d'altération.";
+}
+
+
+function ecoAnswer(n){
+ const m={
+ 1:"La valeur d'un minerai dépend de la substance recherchée, de sa concentration, des coûts d'extraction et du contexte économique et environnemental.",
+ 2:"Un gisement résulte d'une concentration naturelle par un ou plusieurs processus géologiques ; le mécanisme dépend du type de gisement.",
+ 3:"La prospection combine plusieurs méthodes : observations de terrain, cartographie, analyses géochimiques, géophysique et, si nécessaire, sondages."
+ };
+ document.getElementById("eco"+n).textContent="✅ "+m[n];
+}
+function ecoChallenge(){
+ document.getElementById("ecoChallenge").textContent="💡 Non. Une anomalie est un indice. Il faut démontrer sa continuité, sa teneur, son volume, sa minéralogie, les conditions d'extraction et sa viabilité économique avant de parler de gisement exploitable.";
+}
+
+
+function envAnswer(n){
+ const m={
+ 1:"Le transport dépend notamment de la solubilité, de l'adsorption, de la chimie de l'eau et des propriétés hydrauliques du milieu.",
+ 2:"Un aléa devient un risque lorsqu'il peut affecter des personnes, des biens, des infrastructures ou des écosystèmes vulnérables.",
+ 3:"Un diagnostic fiable croise historique, observations de terrain, données géologiques et hydrogéologiques, analyses et modèle conceptuel."
+ };
+ document.getElementById("env"+n).textContent="✅ "+m[n];
+}
+function envChallenge(){
+ document.getElementById("envChallenge").textContent="💡 Le contaminant peut rester adsorbé, être immobilisé ou suivre une autre voie de migration. Il faut donc connaître les propriétés du contaminant et le fonctionnement hydrogéologique du site.";
+}
+
+
+function petroAnswer(n){
+ const m={
+ 1:"La roche-mère fournit la matière organique et doit subir une maturation suffisante pour générer des hydrocarbures.",
+ 2:"Le réservoir combine capacité de stockage (porosité) et capacité de circulation (perméabilité).",
+ 3:"La couverture limite la fuite et la géométrie du piège contrôle l'accumulation ; migration, synchronisation et autres éléments du système sont aussi essentiels."
+ };
+ document.getElementById("petro"+n).textContent="✅ "+m[n];
+}
+function petroChallenge(){
+ document.getElementById("petroChallenge").textContent="💡 Il faut un système complet : roche-mère, génération et migration, roche réservoir, couverture, piège et une chronologie compatible entre ces éléments.";
+}
+
+
+function mineAnswer(n){
+ const m={
+ 1:"L'exploration progresse par étapes : reconnaissance, acquisition de données, sondages, modélisation et estimation.",
+ 2:"La teneur doit être replacée dans son volume et sa distribution ; une teneur élevée sur un volume minuscule peut avoir une portée économique limitée.",
+ 3:"La réserve est une catégorie plus contraignante : elle dépend notamment de facteurs miniers, métallurgiques, économiques, environnementaux et réglementaires."
+ };
+ document.getElementById("mine"+n).textContent="✅ "+m[n];
+}
+function mineChallenge(){
+ document.getElementById("mineChallenge").textContent="💡 Non. La teneur seule ne suffit pas : il faut démontrer le volume et la continuité, puis intégrer les facteurs techniques, économiques, environnementaux et réglementaires qui conditionnent l'exploitabilité.";
 }
 
 </script>
