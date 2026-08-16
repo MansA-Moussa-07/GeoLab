@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#metamorphisme">Métamorphisme</a><a href="#sedimentologie">Sédimentologie</a><a href="#geomorphologie">Géomorphologie</a><a href="#historique">Histoire</a><a href="#volcanologie">Volcanologie</a><a href="#geophysique">Géophysique</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#metamorphisme">Métamorphisme</a><a href="#sedimentologie">Sédimentologie</a><a href="#geomorphologie">Géomorphologie</a><a href="#historique">Histoire</a><a href="#volcanologie">Volcanologie</a><a href="#geophysique">Géophysique</a><a href="#geodynamique">Géodynamique</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -381,6 +381,27 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 </div>
 </section>
 
+<section id="geodynamique">
+<div class="sectionhead"><div class="tag">GÉODYNAMIQUE · V20</div><h2>Plaques, convection & tectonique globale</h2>
+<p>Relie les mouvements des plaques aux dorsales, aux zones de subduction, aux failles transformantes et aux points chauds.</p></div>
+<div class="cards">
+<article class="card"><div class="tag">DIVERGENCE</div><h3>Dorsale océanique</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">← 🌋 →</div>
+<p>Les plaques s'écartent et du matériau mantellique peut remonter, fondre partiellement et contribuer à former de la lithosphère océanique.</p>
+<button class="open" onclick="dynAnswer(1)">À retenir</button><p id="dyn1"></p></article>
+<article class="card"><div class="tag">CONVERGENCE</div><h3>Subduction</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">→ 🌊 ↘️</div>
+<p>Une lithosphère peut plonger sous une autre plaque. Le système associe déformation, séismes et magmatisme selon le contexte.</p>
+<button class="open" onclick="dynAnswer(2)">Comprendre</button><p id="dyn2"></p></article>
+<article class="card"><div class="tag">TRANSFORMANTE</div><h3>Décrochement</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">↗️ 🗺️ ↙️</div>
+<p>Deux plaques coulissent principalement horizontalement. Le mouvement peut générer une forte sismicité.</p>
+<button class="open" onclick="dynAnswer(3)">Voir la synthèse</button><p id="dyn3"></p></article>
+</div>
+<div class="card" style="margin-top:18px"><h3>Point chaud</h3><p>Un point chaud désigne une zone de magmatisme relativement localisée. Une chaîne volcanique peut enregistrer le déplacement d'une plaque au-dessus d'une source durable, mais les modèles réels peuvent être plus complexes.</p>
+<button class="open" onclick="dynChallenge()">Défi</button><p id="dynChallenge"></p></div>
+</section>
+
 <section id="parcours">
 <div class="sectionhead"><div class="tag">LE PARCOURS</div><h2>Une progression structurée</h2><p>Chaque version ouvre un niveau de formation. Clique sur une carte pour afficher son objectif et ses modules.</p></div>
 <div class="stats">
@@ -688,5 +709,15 @@ function geoChallenge(){
  document.getElementById("geoChallenge").textContent="💡 Les ondes S ne se propagent pas dans les fluides : leur absence dans certaines zones aide donc à contraindre l'état physique des matériaux traversés.";
 }
 
+<script>
+function dynAnswer(n){
+ const m={1:"Divergence : les plaques s'éloignent ; une dorsale peut produire de la nouvelle lithosphère océanique.",
+ 2:"Subduction : une plaque plonge sous une autre. Le contexte peut associer fosse, séismes et volcanisme.",
+ 3:"Transformante : le mouvement est surtout horizontal et peut provoquer des séismes lorsque les contraintes se libèrent."};
+ document.getElementById("dyn"+n).textContent="✅ "+m[n];
+}
+function dynChallenge(){
+ document.getElementById("dynChallenge").textContent="💡 Une chaîne volcanique dont les édifices deviennent progressivement plus anciens dans une direction peut aider à discuter le déplacement d'une plaque au-dessus d'une source magmatique.";
+}
 </script>
 </body></html>
