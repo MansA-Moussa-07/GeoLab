@@ -29,7 +29,7 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <body>
 <nav>
 <div class="logo">Geo<span>Lab</span><small>COMPRENDRE LA TERRE · EXPLORER SON POTENTIEL</small></div>
-<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#metamorphisme">Métamorphisme</a><a href="#sedimentologie">Sédimentologie</a><a href="#geomorphologie">Géomorphologie</a><a href="#historique">Histoire</a><a href="#volcanologie">Volcanologie</a><a href="#geophysique">Géophysique</a><a href="#geodynamique">Géodynamique</a><a href="#cartoavancee">Cartographie</a><a href="#hydrogeologie">Hydrogéologie</a><a href="#geochimie">Géochimie</a><a href="#geologieeco">Géologie économique</a><a href="#enviro">Environnement</a><a href="#petrole">Géologie pétrolière</a><a href="#miniereavancee">Géologie minière</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
+<div><a href="#parcours">Parcours</a><a href="#images">Images</a><a href="#atlas">Atlas</a><a href="#fiches">Fiches</a><a href="#cartes">Cartes</a><a href="#labo">Laboratoire</a><a href="#structural">Structure</a><a href="#tectonique">Tectonique</a><a href="#deformation">Déformation</a><a href="#metamorphisme">Métamorphisme</a><a href="#sedimentologie">Sédimentologie</a><a href="#geomorphologie">Géomorphologie</a><a href="#historique">Histoire</a><a href="#volcanologie">Volcanologie</a><a href="#geophysique">Géophysique</a><a href="#geodynamique">Géodynamique</a><a href="#cartoavancee">Cartographie</a><a href="#hydrogeologie">Hydrogéologie</a><a href="#geochimie">Géochimie</a><a href="#geologieeco">Géologie économique</a><a href="#enviro">Environnement</a><a href="#petrole">Géologie pétrolière</a><a href="#miniereavancee">Géologie minière</a><a href="#structavancee">Structure avancée</a><a href="#geochrono">Géochronologie</a><a href="#synthese-terre">Grande synthèse</a><a href="#dashboard">Tableau de bord</a><a href="#progress">Progression</a><a href="#versions">V01–V40</a><a href="#quiz">Quiz</a></div>
 </nav>
 
 <header class="hero">
@@ -610,6 +610,80 @@ footer{background:#0c242a;color:#dbe6e8;padding:30px 7%}.gold{color:var(--gold)}
 <button class="open" onclick="mineChallenge()">Corriger</button><p id="mineChallenge"></p></div>
 </section>
 
+
+<section id="structavancee">
+<div class="sectionhead"><div class="tag">STRUCTURALE AVANCÉE · V28</div><h2>Contraintes, plis, failles & stéréogrammes</h2>
+<p>Passe de l'observation d'une structure à son interprétation cinématique grâce aux attitudes, aux contraintes et aux projections stéréographiques.</p></div>
+<div class="cards">
+<article class="card"><div class="tag">CONTRAINTES</div><h3>σ₁ · σ₂ · σ₃</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:38px">↕ σ₁ &nbsp;→&nbsp; σ₂ &nbsp;→&nbsp; σ₃</div>
+<p>Les trois contraintes principales permettent de décrire l'état de contrainte et d'anticiper les plans ou directions de déformation selon le modèle utilisé.</p>
+<button class="open" onclick="structAnswer(1)">À retenir</button><p id="struct1"></p></article>
+<article class="card"><div class="tag">PLIS &amp; FAILLES</div><h3>Géométrie & cinématique</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:48px">〰️ ✕</div>
+<p>La géométrie décrit la forme ; la cinématique cherche le sens et la nature du déplacement ou du raccourcissement.</p>
+<button class="open" onclick="structAnswer(2)">Comprendre</button><p id="struct2"></p></article>
+<article class="card"><div class="tag">STÉRÉOGRAMME</div><h3>Projection d'un plan</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:repeating-radial-gradient(circle,#eef5f4 0,#eef5f4 19px,#d6a42d 20px,#d6a42d 21px);display:flex;align-items:center;justify-content:center;font-size:42px">◉</div>
+<p>La projection stéréographique permet de représenter orientations de plans et de lignes et de rechercher des relations géométriques.</p>
+<button class="open" onclick="structAnswer(3)">Voir la synthèse</button><p id="struct3"></p></article>
+</div>
+<div class="card" style="margin-top:18px"><h3>Défi structural</h3><p>Pourquoi plusieurs mesures de direction et pendage sont-elles plus utiles qu'une seule mesure pour interpréter une structure régionale ?</p>
+<button class="open" onclick="structChallenge()">Corriger</button><p id="structChallenge"></p></div>
+</section>
+
+
+<section id="geochrono">
+<div class="sectionhead"><div class="tag">GÉOCHRONOLOGIE · V29</div><h2>Isotopes, demi-vie & âges géologiques</h2>
+<p>Comprends comment les systèmes isotopiques permettent d'estimer des âges et pourquoi les hypothèses de datation sont essentielles.</p></div>
+<div class="cards">
+<article class="card"><div class="tag">RADIOACTIVITÉ</div><h3>Désintégration & demi-vie</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">⚛️ → ⚛️</div>
+<p>Un isotope radioactif se transforme spontanément selon une loi probabiliste. La demi-vie est le temps nécessaire pour que la moitié des noyaux initiaux se désintègrent.</p>
+<button class="open" onclick="chronoAnswer(1)">À retenir</button><p id="chrono1"></p></article>
+<article class="card"><div class="tag">SYSTÈME</div><h3>Parent → produit</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(90deg,#d6a42d 0 50%,#61757b 50%);display:flex;align-items:center;justify-content:center;font-size:38px">P → D</div>
+<p>La datation repose sur les quantités de l'isotope parent et du produit, avec des hypothèses sur l'état initial et l'évolution du système.</p>
+<button class="open" onclick="chronoAnswer(2)">Comprendre</button><p id="chrono2"></p></article>
+<article class="card"><div class="tag">INTERPRÉTATION</div><h3>Âge numérique</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">📅 + 🔬 = ⏳</div>
+<p>Un âge isotopique doit être confronté au contexte géologique : fermeture du système, altération, héritage et événements thermiques peuvent influencer le résultat.</p>
+<button class="open" onclick="chronoAnswer(3)">Voir la synthèse</button><p id="chrono3"></p></article>
+</div>
+<div class="card" style="margin-top:18px"><h3>Défi géochronologique</h3><p>Pourquoi une roche doit-elle conserver un système isotopique suffisamment fermé pour qu'une datation soit fiable ?</p>
+<button class="open" onclick="chronoChallenge()">Corriger</button><p id="chronoChallenge"></p></div>
+</section>
+
+
+<section id="synthese-terre">
+<div class="sectionhead"><div class="tag">GRANDE SYNTHÈSE · V30</div><h2>Histoire complète de la Terre</h2>
+<p>Relie les grandes archives géologiques pour reconstruire l'évolution de notre planète, de sa formation aux paysages actuels.</p></div>
+<div class="cards">
+<article class="card"><div class="tag">TEMPS</div><h3>Une Terre en évolution</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:linear-gradient(180deg,#12343b 0 20%,#61757b 20% 45%,#d6a42d 45% 70%,#eef5f4 70%);display:flex;align-items:center;justify-content:center;font-size:42px">🌍 ⏳</div>
+<p>Formation de la Terre, différenciation interne, évolution des océans et de l'atmosphère : chaque étape laisse une archive géologique partielle.</p>
+<button class="open" onclick="synthAnswer(1)">À retenir</button><p id="synth1"></p></article>
+<article class="card"><div class="tag">TECTONIQUE</div><h3>Une planète dynamique</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">🌋 ↔️ 🏔️</div>
+<p>La tectonique des plaques redistribue la lithosphère et influence reliefs, bassins, volcanisme, séismes et cycles géochimiques.</p>
+<button class="open" onclick="synthAnswer(2)">Comprendre</button><p id="synth2"></p></article>
+<article class="card"><div class="tag">VIE & CLIMAT</div><h3>Archives du vivant</h3>
+<div style="height:190px;border:1px solid #dce6e8;border-radius:7px;background:#eef5f4;display:flex;align-items:center;justify-content:center;font-size:42px">🦠 → 🦴 → 🌱</div>
+<p>Fossiles, sédiments, isotopes et structures géologiques permettent de discuter l'évolution de la vie et des environnements anciens.</p>
+<button class="open" onclick="synthAnswer(3)">Voir la synthèse</button><p id="synth3"></p></article>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Défi final — raisonnement géologique</h3>
+<p>Un affleurement présente une roche sédimentaire contenant des fossiles, recoupée par une intrusion magmatique puis affectée par une faille. Quel type de raisonnement permet de reconstruire l'ordre des événements ?</p>
+<button class="open" onclick="synthChallenge()">Corriger</button><p id="synthChallenge"></p>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>🏆 Parcours GeoLab</h3>
+<p><b>V1 → V30 :</b> bases de la géologie → minéralogie → pétrologie → sédimentologie → géomorphologie → géologie historique → volcanologie → géophysique → géodynamique → cartographie → hydrogéologie → géochimie → géologie économique → environnement → géologie pétrolière → géologie minière → structurale avancée → géochronologie → synthèse.</p>
+<p><b>Objectif final :</b> ne plus seulement reconnaître une roche ou une structure, mais expliquer le processus géologique qui l'a produite et relier plusieurs indices indépendants.</p>
+</div>
+</section>
+
 <section id="parcours">
 <div class="sectionhead"><div class="tag">LE PARCOURS</div><h2>Une progression structurée</h2><p>Chaque version ouvre un niveau de formation. Clique sur une carte pour afficher son objectif et ses modules.</p></div>
 <div class="stats">
@@ -1014,6 +1088,32 @@ function mineAnswer(n){
 }
 function mineChallenge(){
  document.getElementById("mineChallenge").textContent="💡 Non. La teneur seule ne suffit pas : il faut démontrer le volume et la continuité, puis intégrer les facteurs techniques, économiques, environnementaux et réglementaires qui conditionnent l'exploitabilité.";
+}
+
+
+function chronoAnswer(n){
+ const m={
+ 1:"La demi-vie est constante pour un isotope donné et permet de relier la proportion parent/produit au temps écoulé.",
+ 2:"Le calcul dépend du système isotopique choisi et des conditions initiales. Le produit mesuré peut être radiogénique et/ou avoir une composante initiale.",
+ 3:"Un âge numérique n'est pas une simple date : il représente un événement ou une fermeture de système qu'il faut interpréter dans son contexte géologique."
+ };
+ document.getElementById("chrono"+n).textContent="✅ "+m[n];
+}
+function chronoChallenge(){
+ document.getElementById("chronoChallenge").textContent="💡 Si des isotopes parents ou produits sont ajoutés ou perdus après la fermeture, le rapport mesuré peut être modifié et l'âge calculé devenir biaisé.";
+}
+
+
+function synthAnswer(n){
+ const m={
+ 1:"La Terre est un système en évolution : les roches, les océans, l'atmosphère et la biosphère enregistrent des changements successifs.",
+ 2:"La tectonique relie de nombreux phénomènes : création et destruction de lithosphère, déformation, magmatisme, séismes et formation des reliefs.",
+ 3:"Les archives biologiques et géochimiques doivent être croisées avec les archives sédimentaires et tectoniques pour reconstruire les environnements anciens."
+ };
+ document.getElementById("synth"+n).textContent="✅ "+m[n];
+}
+function synthChallenge(){
+ document.getElementById("synthChallenge").textContent="💡 On combine les principes de superposition, de recoupement et de chronologie relative : dépôt de la couche → intrusion qui la recoupe → déformation par la faille. L'ordre exact doit toutefois tenir compte de la géométrie observée sur l'affleurement.";
 }
 
 </script>
