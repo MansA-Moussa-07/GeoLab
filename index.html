@@ -36,13 +36,37 @@ footer{background:#061827;color:#d9e1e6;padding:45px 5% 20px}.foot{max-width:120
 .lesson-content h4{margin-top:0;font-size:23px}.lesson-content p{color:var(--muted)}
 .diagram{height:150px;border-radius:10px;background:linear-gradient(135deg,#102d3d,#d9a52b);display:grid;place-items:center;color:#fff;font-size:52px;margin:16px 0}
 .quiz{margin-top:20px;padding:20px;border-radius:10px;background:#fff;border:1px solid var(--line)}.quiz button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px;border:1px solid #d8e0e4;background:#fff;border-radius:7px;cursor:pointer}.quiz button:hover{border-color:var(--gold)}
+.lesson-content{margin-top:22px;padding:22px;border:1px solid var(--line);border-radius:12px;background:#f7f9fa}.lesson-content h4{font-size:23px;margin-top:0}.diagram{height:130px;border-radius:10px;background:linear-gradient(135deg,#102d3d,#d9a52b);display:grid;place-items:center;color:#fff;font-size:48px;margin:15px 0}.quiz{margin-top:18px;padding:18px;border:1px solid var(--line);border-radius:10px;background:#fff}.quiz button{display:block;width:100%;margin:8px 0;padding:10px;border:1px solid #d8e0e4;background:#fff;border-radius:7px;text-align:left;cursor:pointer}.lesson.active{border-color:var(--gold);background:#fff9e8}''</style>
+
+<style id="geolab-v34-css">
+.student-wrap{margin-top:24px}.student-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:18px}
+.student-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.04)}
+.student-card h3{margin-top:0}.progressbar{height:10px;background:#e8edef;border-radius:99px;overflow:hidden}.progressbar span{display:block;height:100%;width:32%;background:var(--gold);border-radius:99px}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{padding:15px;border:1px solid var(--line);border-radius:10px}.stat strong{font-size:25px;display:block}.badge-row{display:flex;flex-wrap:wrap;gap:10px}.badge{padding:9px 12px;border-radius:999px;background:#eef4f7;font-weight:700;font-size:13px}.badge.locked{opacity:.45}
+.quick-links{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.quick-links button{padding:12px;border:1px solid var(--line);background:#fff;border-radius:9px;text-align:left;cursor:pointer}.quick-links button:hover{border-color:var(--gold)}
+@media(max-width:760px){.student-grid{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr}.quick-links{grid-template-columns:1fr}}
+</style>
+
+<style id="geolab-v35-css">
+.account-card{background:var(--navy);color:#fff;border-radius:14px;padding:22px;margin-bottom:18px}
+.account-flex{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.avatar{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#102d3d;font-size:24px;font-weight:900}
+.account-actions{display:flex;gap:10px;flex-wrap:wrap}.account-actions button{padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;cursor:pointer}
+.login-box{display:none;margin-top:16px;padding:18px;border-radius:10px;background:#fff;color:#102d3d}
+.login-box.open{display:block}.login-box input{width:100%;box-sizing:border-box;padding:11px;margin:6px 0 10px;border:1px solid #d8e0e4;border-radius:7px}.login-box button{padding:10px 14px;border:0;border-radius:7px;background:var(--gold);cursor:pointer;font-weight:800}
+.sync-note{font-size:12px;opacity:.8;margin-top:8px}
+</style>
+
+<style id="geolab-v36-css">
+.v36-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.v36-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}.v36-card h3{margin:8px 0}.searchbar{display:flex;gap:10px;margin:18px 0}.searchbar input,.searchbar select{flex:1;padding:12px;border:1px solid var(--line);border-radius:8px;background:#fff}.v36-tag{display:inline-block;padding:5px 9px;border-radius:99px;background:#eef4f7;font-size:12px;font-weight:800}.quiz-option{display:block;width:100%;padding:12px;margin:8px 0;text-align:left;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer}.quiz-option.correct{border-color:#4d8b62;background:#edf8f0}.quiz-option.wrong{border-color:#b65a5a;background:#fff0f0}.gallery-img{height:150px;border-radius:11px;display:grid;place-items:center;font-size:55px;background:linear-gradient(135deg,#102d3d,#d9a52b);color:#fff}.score-big{font-size:40px;font-weight:900}.filter-empty{display:none;padding:18px;text-align:center;color:var(--muted)}
+@media(max-width:800px){.v36-grid{grid-template-columns:1fr}.searchbar{flex-direction:column}}
 </style>
 </head>
 <body>
 <div class="top"><div>✉️ nabmoussadoumbia07@gmail.com &nbsp;&nbsp; 🟢 0150898773</div><div>f &nbsp; ◎ &nbsp; ▶</div></div>
 <nav>
 <a class="logo" href="#accueil"><span class="logo-icon">⌁</span>Geo<mark>Lab</mark></a>
-<div class="links"><a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#formations">Formations ▾</a><a href="#cours">Cours</a><a href="#ressources">Ressources ▾</a><a href="#contact">Contact</a><a class="cta" href="#inscription">👤 S'inscrire</a></div>
+<div class="links"><a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#formations">Formations ▾</a><a href="#bibliotheque">Bibliothèque</a><a href="#quiz-lab">Quiz</a><a href="#galerie">Galerie</a><a href="#espace-etudiant">Mon espace</a><a href="#espace-etudiant">Mon espace</a><a href="#ressources">Ressources ▾</a><a href="#contact">Contact</a><a class="cta" href="#inscription">👤 S'inscrire</a></div>
 <div class="menu">☰</div>
 </nav>
 
@@ -75,14 +99,87 @@ footer{background:#061827;color:#d9e1e6;padding:45px 5% 20px}.foot{max-width:120
 </section>
 
 
-<section id="catalogue"><div class="section-title"><div class="eyebrow">CATALOGUE GEO LAB</div><h2>Choisissez votre parcours</h2><p>Chaque formation ouvre maintenant un parcours structuré avec ses leçons et exercices.</p></div>
+<section id="disciplines"><div class="section-title"><div class="eyebrow">PARCOURS COMPLETS</div><h2>Toutes les disciplines GeoLab</h2><p>Retrouvez les matières avancées dans une architecture unique.</p></div><div class="grid"><article class="card"><div class="card-body"><span class="pill">EAU</span><h3>Hydrogéologie</h3><p>5 leçons structurées avec exercices et vérifications.</p><button class="btn-small" onclick="openCourse(6)">Ouvrir le parcours</button></div></article><article class="card"><div class="card-body"><span class="pill">CHIMIE</span><h3>Géochimie</h3><p>5 leçons structurées avec exercices et vérifications.</p><button class="btn-small" onclick="openCourse(7)">Ouvrir le parcours</button></div></article><article class="card"><div class="card-body"><span class="pill">VOLCANS</span><h3>Volcanologie</h3><p>5 leçons structurées avec exercices et vérifications.</p><button class="btn-small" onclick="openCourse(8)">Ouvrir le parcours</button></div></article><article class="card"><div class="card-body"><span class="pill">ÉNERGIE</span><h3>Géologie pétrolière</h3><p>5 leçons structurées avec exercices et vérifications.</p><button class="btn-small" onclick="openCourse(9)">Ouvrir le parcours</button></div></article><article class="card"><div class="card-body"><span class="pill">ENVIRONNEMENT</span><h3>Géologie environnementale</h3><p>5 leçons structurées avec exercices et vérifications.</p><button class="btn-small" onclick="openCourse(10)">Ouvrir le parcours</button></div></article><article class="card"><div class="card-body"><span class="pill">TEMPS</span><h3>Géochronologie</h3><p>5 leçons structurées avec exercices et vérifications.</p><button class="btn-small" onclick="openCourse(11)">Ouvrir le parcours</button></div></article><article class="card"><div class="card-body"><span class="pill">SÉDIMENTS</span><h3>Sédimentologie</h3><p>5 leçons structurées avec exercices et vérifications.</p><button class="btn-small" onclick="openCourse(12)">Ouvrir le parcours</button></div></article><article class="card"><div class="card-body"><span class="pill">RELIEFS</span><h3>Géomorphologie</h3><p>5 leçons structurées avec exercices et vérifications.</p><button class="btn-small" onclick="openCourse(13)">Ouvrir le parcours</button></div></article><article class="card"><div class="card-body"><span class="pill">PLANÈTE</span><h3>Géodynamique</h3><p>5 leçons structurées avec exercices et vérifications.</p><button class="btn-small" onclick="openCourse(14)">Ouvrir le parcours</button></div></article><article class="card"><div class="card-body"><span class="pill">HISTOIRE</span><h3>Géologie historique</h3><p>5 leçons structurées avec exercices et vérifications.</p><button class="btn-small" onclick="openCourse(15)">Ouvrir le parcours</button></div></article></div></section><section id="catalogue"><div class="section-title"><div class="eyebrow">CATALOGUE GEO LAB</div><h2>Choisissez votre parcours</h2><p>Chaque formation ouvre maintenant un parcours structuré avec ses leçons et exercices.</p></div>
 <div class="grid">
 <div class="card"><div class="card-body"><span class="pill">NIVEAU 1</span><h3>Fondamentaux</h3><p>Construisez les bases indispensables avant d'aborder les méthodes avancées.</p><button class="btn-small" onclick="openCourse(0)">Commencer</button></div></div>
 <div class="card"><div class="card-body"><span class="pill">NIVEAU 2</span><h3>Géologie appliquée</h3><p>Explorez les ressources, l'environnement, l'hydrogéologie et le pétrole.</p><button class="btn-small" onclick="openCourse(3)">Commencer</button></div></div>
 <div class="card"><div class="card-body"><span class="pill">NIVEAU 3</span><h3>Avancé</h3><p>Structure, géochronologie, géophysique et synthèse du raisonnement géologique.</p><button class="btn-small" onclick="openCourse(2)">Commencer</button></div></div>
 </div></section>
 
-<section class="final" id="inscription"><div class="final-inner"><h2>Prêt à commencer votre aventure dans le monde de la <span style="color:var(--gold2)">géologie</span> ?</h2><p>Rejoignez GeoLab et construisez progressivement vos connaissances, du terrain aux méthodes avancées.</p><div class="buttons"><a class="btn gold" href="#contact">👤 S'inscrire maintenant</a><a class="btn ghost" href="#contact">🟢 Nous contacter</a></div></div></section>
+
+
+<section id="bibliotheque">
+<div class="section-title"><div class="eyebrow">BIBLIOTHÈQUE</div><h2>Trouvez votre cours</h2><p>Recherchez une matière et filtrez rapidement votre parcours.</p></div>
+<div class="searchbar"><input id="courseSearch" placeholder="🔎 Rechercher : minéralogie, géophysique..." oninput="filterCourses()"><select id="courseLevel" onchange="filterCourses()"><option value="all">Tous les niveaux</option><option value="debutant">Débutant</option><option value="intermediaire">Intermédiaire</option><option value="avance">Avancé</option></select></div>
+<div class="v36-grid" id="courseLibrary">
+<div class="v36-card course-item" data-level="debutant" data-name="minéralogie"><span class="v36-tag">DÉBUTANT</span><h3>💎 Minéralogie</h3><p>Identifier, classer et comprendre les minéraux.</p><button class="btn-small" onclick="openCourse(0)">Ouvrir</button></div>
+<div class="v36-card course-item" data-level="debutant" data-name="pétrologie"><span class="v36-tag">DÉBUTANT</span><h3>🪨 Pétrologie</h3><p>Comprendre les grandes familles de roches.</p><button class="btn-small" onclick="openCourse(1)">Ouvrir</button></div>
+<div class="v36-card course-item" data-level="intermediaire" data-name="cartographie géologique"><span class="v36-tag">INTERMÉDIAIRE</span><h3>🗺️ Cartographie</h3><p>Lire et interpréter une carte géologique.</p><button class="btn-small" onclick="openCourse(5)">Ouvrir</button></div>
+<div class="v36-card course-item" data-level="intermediaire" data-name="hydrogéologie"><span class="v36-tag">INTERMÉDIAIRE</span><h3>💧 Hydrogéologie</h3><p>Comprendre les eaux souterraines.</p><button class="btn-small" onclick="openCourse(6)">Ouvrir</button></div>
+<div class="v36-card course-item" data-level="avance" data-name="géologie structurale"><span class="v36-tag">AVANCÉ</span><h3>📐 Géologie structurale</h3><p>Analyser plis, failles et déformations.</p><button class="btn-small" onclick="openCourse(2)">Ouvrir</button></div>
+<div class="v36-card course-item" data-level="avance" data-name="géophysique"><span class="v36-tag">AVANCÉ</span><h3>📡 Géophysique</h3><p>Interpréter les signatures physiques du sous-sol.</p><button class="btn-small" onclick="openCourse(4)">Ouvrir</button></div>
+</div><div id="filterEmpty" class="filter-empty">Aucun cours ne correspond à votre recherche.</div>
+</section>
+
+<section id="quiz-lab">
+<div class="section-title"><div class="eyebrow">QUIZ LAB</div><h2>Testez vos connaissances</h2><p>Une question rapide pour mesurer votre progression.</p></div>
+<div class="v36-card"><span class="v36-tag">MINÉRALOGIE · NIVEAU 1</span><h3>Quelle propriété mesure la résistance d'un minéral à la rayure ?</h3>
+<button class="quiz-option" onclick="quizAnswer(this,false)">La densité</button>
+<button class="quiz-option" onclick="quizAnswer(this,true)">La dureté</button>
+<button class="quiz-option" onclick="quizAnswer(this,false)">Le trait</button>
+<button class="quiz-option" onclick="quizAnswer(this,false)">L'éclat</button>
+<p id="quizFeedback" style="font-weight:800"></p></div>
+</section>
+
+<section id="galerie">
+<div class="section-title"><div class="eyebrow">GALERIE SCIENTIFIQUE</div><h2>Observer avant d'interpréter</h2><p>Les images deviennent une partie intégrante de l'apprentissage GeoLab.</p></div>
+<div class="v36-grid">
+<div class="v36-card"><div class="gallery-img">💎</div><h3>Minéraux</h3><p>Formes, éclat, clivage et identification.</p></div>
+<div class="v36-card"><div class="gallery-img">🪨</div><h3>Roches</h3><p>Textures et assemblages minéralogiques.</p></div>
+<div class="v36-card"><div class="gallery-img">🌋</div><h3>Volcanisme</h3><p>Édifices et produits volcaniques.</p></div>
+<div class="v36-card"><div class="gallery-img">🗺️</div><h3>Cartographie</h3><p>Cartes, coupes et structures.</p></div>
+<div class="v36-card"><div class="gallery-img">💧</div><h3>Eaux souterraines</h3><p>Aquifères et écoulements.</p></div>
+<div class="v36-card"><div class="gallery-img">📡</div><h3>Géophysique</h3><p>Anomalies et signatures du sous-sol.</p></div>
+</div>
+</section>
+<section id="espace-etudiant" class="student-wrap">
+<div class="account-card">
+<div class="account-flex">
+<div style="display:flex;align-items:center;gap:14px"><div class="avatar" id="avatar">G</div><div><div class="eyebrow" style="color:#d9a52b">COMPTE GEO LAB</div><h3 id="studentName" style="margin:4px 0;color:#fff">Étudiant GeoLab</h3><div id="studentStatus">Progression locale activée</div></div></div>
+<div class="account-actions"><button onclick="toggleLogin()">👤 Modifier mon profil</button><button onclick="resetProgress()">↻ Réinitialiser</button></div>
+</div>
+<div class="login-box" id="loginBox"><b>Profil étudiant</b><input id="nameInput" placeholder="Votre prénom ou pseudo"><button onclick="saveProfile()">Enregistrer</button><div class="sync-note">Votre profil et votre progression sont enregistrés dans ce navigateur.</div></div>
+</div>
+
+<div class="section-title"><div class="eyebrow">ESPACE ÉTUDIANT</div><h2>Mon tableau de bord</h2><p>Un seul endroit pour suivre les cours, les quiz et votre progression.</p></div>
+<div class="student-grid">
+<div class="student-card">
+<h3>🎓 Mon parcours GeoLab</h3>
+<p><b>Parcours conseillé :</b> Fondamentaux → Observation → Interprétation → Application</p>
+<div class="progressbar"><span id="progressFill"></span></div>
+<p><small>32 % du parcours global · continuez avec votre prochaine leçon.</small></p>
+<div class="stat-row">
+<div class="stat"><small>Leçons</small><strong id="doneCount">0</strong><span>terminées</span></div>
+<div class="stat"><small>Quiz</small><strong id="quizCount">0</strong><span>validés</span></div>
+<div class="stat"><small>Score</small><strong id="scoreValue">0%</strong><span>progression</span></div>
+</div>
+</div>
+<div class="student-card">
+<h3>🏆 Mes badges</h3>
+<div class="badge-row"><span class="badge">🌱 Débutant</span><span class="badge">🪨 Minéralogiste</span><span class="badge">🧭 Explorateur</span><span class="badge locked">🔒 Géologue confirmé</span></div>
+</div>
+</div>
+<div class="student-card" style="margin-top:18px">
+<h3>⚡ Accès rapide</h3>
+<div class="quick-links">
+<button onclick="openCourse(0)">💎 Reprendre Minéralogie</button>
+<button onclick="openCourse(1)">🪨 Reprendre Pétrologie</button>
+<button onclick="openCourse(6)">💧 Découvrir Hydrogéologie</button>
+<button onclick="document.getElementById('disciplines').scrollIntoView({behavior:'smooth'})">🧭 Voir toutes les disciplines</button>
+</div>
+</div>
+</section>
+<section id="parcours-global"><div class="section-title"><div class="eyebrow">ROADMAP GEO LAB</div><h2>Votre chemin de progression</h2><p>Des bases vers le raisonnement géologique complet.</p></div><div class="grid"><article class="card"><div class="card-body"><span class="pill">01</span><h3>Comprendre</h3><p>Minéralogie · Pétrologie · Sédimentologie · Géomorphologie</p></div></article><article class="card"><div class="card-body"><span class="pill">02</span><h3>Observer & mesurer</h3><p>Cartographie · Géophysique · Géochimie · Hydrogéologie</p></div></article><article class="card"><div class="card-body"><span class="pill">03</span><h3>Interpréter</h3><p>Structurale · Géodynamique · Volcanologie · Géochronologie</p></div></article><article class="card"><div class="card-body"><span class="pill">04</span><h3>Appliquer</h3><p>Minière · Pétrolière · Environnement</p></div></article><article class="card"><div class="card-body"><span class="pill">05</span><h3>Synthétiser</h3><p>Géologie historique · Histoire de la Terre · Études de cas</p></div></article></div></section><section class="final" id="inscription"><div class="final-inner"><h2>Prêt à commencer votre aventure dans le monde de la <span style="color:var(--gold2)">géologie</span> ?</h2><p>Rejoignez GeoLab et construisez progressivement vos connaissances, du terrain aux méthodes avancées.</p><div class="buttons"><a class="btn gold" href="#contact">👤 S'inscrire maintenant</a><a class="btn ghost" href="#contact">🟢 Nous contacter</a></div></div></section>
 </main>
 
 <footer id="contact"><div class="foot"><div><div class="logo" style="color:#fff"><span class="logo-icon">⌁</span>Geo<mark>Lab</mark></div><p>Comprendre la Terre, explorer son potentiel.</p></div><div><h3>Liens utiles</h3><a href="#apropos">À propos</a><a href="#formations">Nos formations</a><a href="#ressources">Ressources</a><a href="#contact">FAQ</a></div><div><h3>Formations</h3><a href="#formations">Minéralogie</a><a href="#formations">Pétrologie</a><a href="#formations">Géologie structurale</a><a href="#formations">Géophysique</a></div><div><h3>Contact</h3><p>🟢 0150898773</p><p>✉️ nabmoussadoumbia07@gmail.com</p><p>📍 Abidjan, Côte d'Ivoire</p></div></div><div class="copy">© 2026 GeoLab — Projet éducatif. Tous droits réservés.</div></footer>
@@ -101,7 +198,17 @@ const geoCourses = [
  {title:"Géologie minière",tag:"RESSOURCES",meta:"Parcours appliqué · 5 leçons",intro:"Passez de l'indice minéralisé à une compréhension structurée de l'exploration, des teneurs, ressources et réserves.",lessons:["Types de gisements","Exploration","Teneur et tonnage","Ressources et réserves","Étude de cas"]},
  {title:"Géophysique",tag:"MESURES",meta:"Parcours méthodes · 5 leçons",intro:"Découvrez comment les propriétés physiques du sous-sol peuvent être mesurées et interprétées.",lessons:["Principes de géophysique","Gravimétrie","Magnétisme","Méthodes électriques","Interprétation"]},
  {title:"Cartographie géologique",tag:"TERRAIN",meta:"Parcours terrain · 5 leçons",intro:"Apprenez à lire, construire et interpréter une carte géologique et ses coupes.",lessons:["Lire une carte","Direction et pendage","Coupes géologiques","Symboles et légende","Exercice de terrain"]}
-];
+,
+{title:"Hydrogéologie",tag:"EAU",meta:"Parcours GeoLab · 5 leçons",intro:"Parcours structuré de Hydrogéologie.",lessons:["Cycle de l"eau souterraine", "Aquifères et nappes", "Porosité et perméabilité", "Pompage et essais", "Protection des eaux souterraines"]},
+{title:"Géochimie",tag:"CHIMIE",meta:"Parcours GeoLab · 5 leçons",intro:"Parcours structuré de Géochimie.",lessons:["Éléments et isotopes", "Altération et mobilité", "Géochimie des roches", "Bilans géochimiques", "Interprétation d"analyses"]},
+{title:"Volcanologie",tag:"VOLCANS",meta:"Parcours GeoLab · 5 leçons",intro:"Parcours structuré de Volcanologie.",lessons:["Magma et fusion", "Types de volcans", "Éruptions", "Produits volcaniques", "Risques volcaniques"]},
+{title:"Géologie pétrolière",tag:"ÉNERGIE",meta:"Parcours GeoLab · 5 leçons",intro:"Parcours structuré de Géologie pétrolière.",lessons:["Systèmes pétroliers", "Roche mère", "Migration", "Réservoir et couverture", "Pièges"]},
+{title:"Géologie environnementale",tag:"ENVIRONNEMENT",meta:"Parcours GeoLab · 5 leçons",intro:"Parcours structuré de Géologie environnementale.",lessons:["Sols et contaminants", "Pollution des eaux", "Risques géologiques", "Remédiation", "Étude d"impact"]},
+{title:"Géochronologie",tag:"TEMPS",meta:"Parcours GeoLab · 5 leçons",intro:"Parcours structuré de Géochronologie.",lessons:["Isotopes et radioactivité", "Demi-vie", "Datation relative", "Datation numérique", "Interpréter un âge"]},
+{title:"Sédimentologie",tag:"SÉDIMENTS",meta:"Parcours GeoLab · 5 leçons",intro:"Parcours structuré de Sédimentologie.",lessons:["Altération et érosion", "Transport", "Dépôt", "Structures sédimentaires", "Bassins sédimentaires"]},
+{title:"Géomorphologie",tag:"RELIEFS",meta:"Parcours GeoLab · 5 leçons",intro:"Parcours structuré de Géomorphologie.",lessons:["Processus externes", "Altération", "Rivières", "Reliefs et versants", "Lecture du paysage"]},
+{title:"Géodynamique",tag:"PLANÈTE",meta:"Parcours GeoLab · 5 leçons",intro:"Parcours structuré de Géodynamique.",lessons:["Structure interne", "Convection", "Tectonique des plaques", "Ouverture et subduction", "Cycles géodynamiques"]},
+{title:"Géologie historique",tag:"HISTOIRE",meta:"Parcours GeoLab · 5 leçons",intro:"Parcours structuré de Géologie historique.",lessons:["Temps géologique", "Grandes périodes", "Fossiles et évolution", "Crises biologiques", "Histoire complète de la Terre"]}];
 const lessonData={
 "Minéralogie":[
 ["Introduction à la minéralogie","Un minéral est un solide naturel généralement caractérisé par une composition chimique et une structure cristalline ordonnées.","💎","Quelle propriété permet de distinguer la dureté de la couleur ?","La dureté se mesure par résistance à la rayure, tandis que la couleur est une propriété visuelle qui peut varier."],
@@ -146,6 +253,16 @@ const lessonData={
 ["Exercice de terrain","L'observation de terrain permet de confronter la carte au réel et d'améliorer le modèle géologique.","🥾","Que faut-il noter sur le terrain ?","Lithologie, structures, contacts, coordonnées, attitudes et observations utiles à l'interprétation."]
 ]};
 let currentCourse=0, currentLesson=0;
+function showLesson(n){
+ currentLesson=n;
+ const c=geoCourses[currentCourse];
+ const icons={"Hydrogéologie":"💧","Géochimie":"⚗️","Volcanologie":"🌋","Géologie pétrolière":"🛢️","Géologie environnementale":"🌱","Géochronologie":"⏳","Sédimentologie":"🏜️","Géomorphologie":"🏔️","Géodynamique":"🌍","Géologie historique":"🦴"};
+ const icon=icons[c.title]||"🪨";
+ const box=document.getElementById("lessonContent");
+ if(!box)return;
+ box.innerHTML='<h4>'+c.lessons[n]+'</h4><p>Cette leçon présente les notions essentielles, les observations à rechercher et leur interprétation géologique.</p><div class="diagram">'+icon+'</div><div class="quiz"><b>🧠 Vérification rapide</b><p>Quel est le principe essentiel à retenir de cette leçon ?</p><button onclick="this.nextElementSibling.textContent=\'✅ Reliez toujours les observations aux processus géologiques qui peuvent les expliquer.\'">Voir la réponse</button><p style="font-weight:800"></p></div>';
+ document.querySelectorAll(".lesson").forEach((x,i)=>x.classList.toggle("active",i===n));
+}
 function openCourse(i){
  currentCourse=i; const c=geoCourses[i];
  document.getElementById("courseTag").textContent=c.tag;
@@ -163,5 +280,76 @@ function showLesson(n){
 function answerQuiz(btn,ok){const r=btn.parentElement.querySelector(".quiz-result");r.textContent=ok?"✅ "+lessonData[geoCourses[currentCourse].title][currentLesson][4]:"💡 Relisez la question puis choisissez « Voir la réponse » lorsque vous êtes prêt."}
 function closeCourse(){document.getElementById("coursePanel").classList.remove("open");document.body.style.overflow="";}
 function startLesson(){showLesson(0)}
+</script>
+
+<script>
+const completedLessons=new Set();
+
+</script>
+
+<script id="geolab-v35-js">
+const STORAGE_KEY="geolab_v35_progress";
+let geoState=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{"name":"","done":[],"quiz":[]}');
+
+function saveState(){localStorage.setItem(STORAGE_KEY,JSON.stringify(geoState));updateDashboard();}
+function toggleLogin(){document.getElementById("loginBox").classList.toggle("open");}
+function saveProfile(){
+ const v=(document.getElementById("nameInput").value||"").trim();
+ if(!v)return;
+ geoState.name=v;saveState();document.getElementById("loginBox").classList.remove("open");
+}
+function resetProgress(){
+ if(confirm("Réinitialiser la progression de GeoLab sur cet appareil ?")){
+  geoState={name:geoState.name||"",done:[],quiz:[]};saveState();
+ }
+}
+function updateDashboard(){
+ const total=geoCourses.length*5;
+ const done=geoState.done.length;
+ const pct=total?Math.round(done/total*100):0;
+ const name=geoState.name||"Étudiant GeoLab";
+ const nameEl=document.getElementById("studentName"), avatar=document.getElementById("avatar");
+ if(nameEl)nameEl.textContent=name;
+ if(avatar)avatar.textContent=name.charAt(0).toUpperCase();
+ const d=document.getElementById("doneCount"),q=document.getElementById("quizCount"),s=document.getElementById("scoreValue"),f=document.getElementById("progressFill");
+ if(d)d.textContent=done;if(q)q.textContent=geoState.quiz.length;if(s)s.textContent=pct+"%";if(f)f.style.width=pct+"%";
+}
+function completeLesson(){
+ const key=currentCourse+"-"+currentLesson;
+ if(!geoState.done.includes(key))geoState.done.push(key);
+ saveState();
+ const msg=document.getElementById("completionMsg");
+ if(msg)msg.textContent="🎉 Leçon validée et enregistrée sur cet appareil.";
+}
+function answerAndSave(btn){
+ const key=currentCourse+"-"+currentLesson;
+ if(!geoState.quiz.includes(key))geoState.quiz.push(key);
+ saveState();
+ btn.nextElementSibling.textContent="✅ Bonne démarche : reliez toujours les observations aux processus géologiques.";
+}
+document.addEventListener("DOMContentLoaded",updateDashboard);
+</script>
+
+<script id="geolab-v36-js">
+function filterCourses(){
+ const q=(document.getElementById("courseSearch").value||"").toLowerCase();
+ const level=document.getElementById("courseLevel").value;
+ let visible=0;
+ document.querySelectorAll(".course-item").forEach(el=>{
+  const okName=el.dataset.name.includes(q), okLevel=level==="all"||el.dataset.level===level;
+  el.style.display=okName&&okLevel?"block":"none"; if(okName&&okLevel)visible++;
+ });
+ document.getElementById("filterEmpty").style.display=visible?"none":"block";
+}
+function quizAnswer(btn,ok){
+ document.querySelectorAll(".quiz-option").forEach(b=>b.disabled=true);
+ btn.classList.add(ok?"correct":"wrong");
+ document.getElementById("quizFeedback").textContent=ok?"🎉 Bonne réponse ! La dureté mesure la résistance à la rayure.":"❌ Pas tout à fait. La bonne réponse est « la dureté ».";
+ if(ok && typeof geoState!=="undefined"){
+  const key="quiz-lab-v36";
+  if(!geoState.quiz.includes(key))geoState.quiz.push(key);
+  if(typeof saveState==="function")saveState();
+ }
+}
 </script>
 </body></html>
